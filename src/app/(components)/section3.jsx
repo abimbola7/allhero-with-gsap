@@ -34,15 +34,17 @@ const Section3 = () => {
     scope : containerRef
   })
   return (
-    <div className="w-full h-[150vh] bg-[#181818] grid grid-cols-3" id="section3" ref={containerRef}>
+    <div className="w-full h-[120vh] bg-[#181818] grid grid-cols-3" id="section3" ref={containerRef}>
       <div className='relative w-full before:absolute before:w-full before:h-[50%] before:bg-black'>
         <div className='w-[189%] relative leftImage z-[10]'>
           <img src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/about-1125x750-c-center.jpg" alt="" className='absolute top-0 left-0 w-full h-auto py-28'/>
         </div>
       </div>
       <div className='col-span-2 overflow-hidden'>
-        <div className='w-full h-full bg-[#640000] leftImage'>
-
+        <div className='w-full h-full bg-[#640000] flex items-end justify-end pb-20 pr-28'>
+          <div className="flex flex-col w-32 border border-white h-96 spacce-y-6">
+            
+          </div>
         </div>
       </div>
     </div>
