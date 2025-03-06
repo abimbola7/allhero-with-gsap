@@ -5,7 +5,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Branch from "./ui/branch";
-import Link from "next/link";
 import Button from "./ui/button";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -17,10 +16,10 @@ const Section3 = () => {
   const { contextSafe } = useGSAP(
     () => {
       const redSection = gsap.utils.toArray(".redSection")
-      console.log(redSection);
+      // console.log(redSection);
       const section3 = document.getElementById("section3");
       const leftImage = gsap.utils.toArray(".leftImage");
-      console.log(leftImage);
+      // console.log(leftImage);
       timeline.current = gsap
         .timeline({
           scrollTrigger: {
@@ -44,7 +43,7 @@ const Section3 = () => {
           trigger : section3,
           start : "top bottom",
           toggleActions: "play none none reset",
-          markers: true,
+          // markers: true,
         }
       }).from(redSection, {
         opacity : 0,
@@ -60,7 +59,7 @@ const Section3 = () => {
   );
   return (
     <div
-      className="w-full h-[140vh] bg-[#181818] grid grid-cols-3"
+      className="w-full h-fit bg-[#181818] grid grid-cols-3"
       id="section3"
       ref={containerRef}
     >
@@ -69,12 +68,12 @@ const Section3 = () => {
           <img
             src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/about-1125x750-c-center.jpg"
             alt=""
-            className="absolute top-0 left-0 w-full h-auto py-28"
+            className="absolute -top-10 left-0 w-full h-auto py-28"
           />
         </div>
       </div>
       <div className="col-span-2 overflow-hidden">
-        <div className="w-full h-full bg-[#640000] flex items-start justify-end pt-48 pr-20">
+        <div className="w-full h-full bg-[#640000] flex items-start justify-end pt-36 pr-16 pl-[50%] pb-20">
           <div className="flex flex-col w-full max-w-[22rem] space-y-6 h-fit">
             <Branch title={"IDEOLOGY"} id={1} className={"redSection"}/>
             <h1 className="font-extrabold text-white text-7xl redSection">RED</h1>
