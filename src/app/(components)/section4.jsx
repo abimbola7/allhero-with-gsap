@@ -145,7 +145,7 @@ const Section4 = () => {
   } = useGSAP(() => {
     timeline.current = gsap.timeline({
       defaults : {
-        duration : .25
+        duration : .2
       }
     })
   }, {
@@ -153,6 +153,7 @@ const Section4 = () => {
   })
 
   const mouseEnter = contextSafe((grid, grid2, gridItem) => {
+    console.log(lastHoveredItem.current)
     // If we enter a new grid item, reset the previous animations first
     if (lastHoveredItem.current && lastHoveredItem.current !== gridItem) {
       timeline.current?.clear();
@@ -178,13 +179,13 @@ const Section4 = () => {
   
   const mouseLeave = contextSafe((event) => {
     // Only reset if we're leaving the entire grid container
-    if (event.relatedTarget && !gridRef.current.contains(event.relatedTarget)) {
+    // if (event.relatedTarget && !gridRef.current.contains(event.relatedTarget)) {
       timeline.current?.clear(); 
       timeline.current.set('.gridSection', {
         xPercent : 0,
       }, 0);
-      lastHoveredItem.current = null;
-    }
+      // lastHoveredItem.current = null;
+    // }
   })
 
   const afterAnimation = contextSafe((grid) => {
@@ -194,14 +195,14 @@ const Section4 = () => {
   })
   
   return (
-    <div className='w-full min-h-screen bg-[#181818]'>
+    <div className='w-full min-h-screen bg-[#181818] py-16'>
       <div className="h-full mx-auto max-w-7xl">
         <Branch 
         title={"SERVICE"} 
         id={2}
         className={"py-10"}/>
       </div>
-      <div className="w-full max-w-[1440px] grid grid-cols-3" ref={gridRef} onMouseLeave={mouseLeave}>
+      <div className="w-full max-w-[1440px] mx-auto grid grid-cols-3" ref={gridRef} onMouseLeave={mouseLeave}>
         <div 
         onMouseEnter={(e) => { mouseEnter(".grid1", ".grid2", e.currentTarget) }}
         className="relative overflow-hidden cursor-pointer grid-item-1">
@@ -223,7 +224,7 @@ const Section4 = () => {
           <div className="absolute top-0 w-full h-full pointer-events-none -left-[100%] bg-black/50 gridSection grid4" />
           <div className="absolute top-0 left-0 w-full h-full pointer-events-none bg-black/50 gridSection grid3" />
           <Image
-          src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/service_details02.jpg"
+          src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/service_details03.jpg"
           alt="service-details"
           className=""
           quality={100}
@@ -238,7 +239,7 @@ const Section4 = () => {
           <div className="absolute top-0 w-full h-full pointer-events-none -left-[100%] bg-black/50 gridSection grid6" />
           <div className="absolute top-0 left-0 w-full h-full pointer-events-none bg-black/50 gridSection grid5" />
           <Image
-          src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/service_details02.jpg"
+          src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/service_details01.jpg"
           alt="service-details"
           className=""
           quality={100}
