@@ -68,7 +68,7 @@ const Section3 = () => {
           <img
             src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/about-1125x750-c-center.jpg"
             alt=""
-            className="absolute -top-10 left-0 w-full h-auto py-28"
+            className="absolute left-0 w-full h-auto -top-10 py-28"
           />
         </div>
       </div>
