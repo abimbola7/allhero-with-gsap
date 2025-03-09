@@ -16,7 +16,7 @@ const Button = ({ children }) => {
         trigger : button,
         start : "top bottom",
         toggleActions: "play none none reset",
-        markers : true,
+        // markers : true,
       }
     }).from(button, {
       opacity: 0,
