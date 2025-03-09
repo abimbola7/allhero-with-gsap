@@ -34,7 +34,7 @@ const Section4 = () => {
             trigger : text,
             start: "top bottom",
             toggleActions: "play none none reset",
-            markers : true,
+            // markers : true,
           }
         });
 
@@ -120,7 +120,7 @@ const Section4 = () => {
   });
 
   return (
-    <div className="w-full min-h-screen bg-[#181818] py-16 section4">
+    <div className="w-full min-h-screen bg-[#181818] pt-16 pb-20 section4">
       <div className="h-full mx-auto max-w-7xl">
         <Branch title={"SERVICE"} id={2} className={"py-10"} />
       </div>
