@@ -140,16 +140,16 @@ const Section4 = () => {
 
           {/* text 1 */}
           <div className="absolute bottom-0 left-0 w-full p-6 h-fit textSection">
-            <span className="text-[#ffffff80] text-xs font-medium">
+            <span className="text-[#ffffff80] text-xs font-medium textSection">
               SERVICE DETAILS
             </span>
-            <h1 className="mt-3 text-5xl font-semibold text-white">
+            <h1 className="mt-3 text-5xl font-semibold text-white textSection">
               HR Stratey Consulting
             </h1>
-            <h6 className="mt-3 text-sm font-medium text-white">
+            <h6 className="mt-3 text-sm font-medium text-white textSection">
               HR strategy consulting
             </h6>
-            <p className="mt-4 text-sm leading-loose text-[#ffffff80] font-medium">
+            <p className="mt-4 text-sm leading-loose text-[#ffffff80] font-medium textSection">
               From upstream to recruitment strategy development to engagement
               and escorting to joining and establishing through methods such as
               interview measures and training
@@ -176,12 +176,12 @@ const Section4 = () => {
 
           {/* text 2 */}
           <div className="absolute bottom-0 left-0 w-full p-6 h-fit textSection">
-            <span className="text-[#ffffff80] text-xs font-medium">
+            <span className="text-[#ffffff80] text-xs font-medium textSection">
               SERVICE DETAILS
             </span>
-            <h1 className="mt-3 text-5xl font-semibold text-white">Branding</h1>
-            <h6 className="mt-3 text-sm font-medium text-white">branding</h6>
-            <p className="mt-4 text-sm leading-loose text-[#ffffff80] font-medium">
+            <h1 className="mt-3 text-5xl font-semibold text-white textSection">Branding</h1>
+            <h6 className="mt-3 text-sm font-medium text-white textSection">branding</h6>
+            <p className="mt-4 text-sm leading-loose text-[#ffffff80] font-medium textSection">
               Consistently from branding to branding such as websites, footage,
               printed materials, and SNS to improve the value of the companies
               and create a virtuous cycle that is assetally successful.
@@ -208,16 +208,16 @@ const Section4 = () => {
 
           {/* text 3 */}
           <div className="absolute bottom-0 left-0 w-full p-6 h-fit textSection">
-            <span className="text-[#ffffff80] text-xs font-medium">
+            <span className="text-[#ffffff80] text-xs font-medium textSection">
               SERVICE DETAILS
             </span>
-            <h1 className="mt-3 text-5xl font-semibold text-white">
+            <h1 className="mt-3 text-5xl font-semibold text-white textSection">
               Job Advertising
             </h1>
-            <h6 className="mt-3 text-sm font-medium text-white">
+            <h6 className="mt-3 text-sm font-medium text-white textSection">
               job advertisment agency service{" "}
             </h6>
-            <p className="mt-4 text-sm leading-loose text-[#ffffff80] font-medium">
+            <p className="mt-4 text-sm leading-loose text-[#ffffff80] font-medium textSection">
               We will form a tag with a consultant/writer/cameraman/designer to
               create advertisment that can only be lauunched by the company.
             </p>
