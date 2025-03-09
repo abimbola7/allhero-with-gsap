@@ -6,6 +6,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import CSSRulePlugin from "gsap/CSSRulePlugin";
+import ScrollTrigger from "gsap/ScrollTrigger";
 // import ScrollTrigger from 'gsap-trial/ScrollTrigger'
 
 // gsap.registerPlugin(ScrollTrigger)
@@ -15,16 +16,38 @@ gsap.registerPlugin(CSSRulePlugin);
 const Section4 = () => {
   const gridRef = React.useRef(null);
   const timeline = React.useRef(null);
-  const timeline1 = React.useState(null);
+  const timeline1 = React.useRef(null);
+  // const timeline2  = React.useRef(null);
   const lastHoveredItem = React.useRef(null);
 
   const { contextSafe } = useGSAP(
     () => {
+      const textSections = gsap.utils.toArray(".textSection")
       const section4 = document.querySelectorAll(".section4");
-      console.log(section4);
+      console.log(textSections);
       const gridItems = gsap.utils.toArray(".grid-items");
-      timeline1.current = gsap
-        .timeline({
+
+      textSections.forEach((text, i) => {
+        gsap.from(text, {
+          xPercent : -30,
+          scrollTrigger : {
+            trigger : text,
+            start: "top bottom",
+            toggleActions: "play none none reset",
+            markers : true,
+          }
+        });
+
+        // ScrollTrigger.create({
+        //   trigger : text,
+        //   start: "top bottom",
+        //   toggleActions: "play none none reset",
+        //   markers : true,
+        // })
+      })
+
+      
+      timeline1.current = gsap.timeline({
           scrollTrigger: {
             trigger: section4,
             start: "top bottom",
@@ -114,7 +137,9 @@ const Section4 = () => {
         >
           <div className="absolute top-0 w-full h-full pointer-events-none -left-[100%] bg-black/50 gridSection grid2" />
           <div className="absolute top-0 left-0 w-full h-full pointer-events-none bg-black/50 gridSection grid1" />
-          <div className="absolute bottom-0 left-0 w-full p-6 h-fit">
+
+          {/* text 1 */}
+          <div className="absolute bottom-0 left-0 w-full p-6 h-fit textSection">
             <span className="text-[#ffffff80] text-xs font-medium">
               SERVICE DETAILS
             </span>
@@ -148,7 +173,9 @@ const Section4 = () => {
         >
           <div className="absolute top-0 w-full h-full pointer-events-none -left-[100%] bg-black/50 gridSection grid4" />
           <div className="absolute top-0 left-0 w-full h-full pointer-events-none bg-black/50 gridSection grid3" />
-          <div className="absolute bottom-0 left-0 w-full p-6 h-fit">
+
+          {/* text 2 */}
+          <div className="absolute bottom-0 left-0 w-full p-6 h-fit textSection">
             <span className="text-[#ffffff80] text-xs font-medium">
               SERVICE DETAILS
             </span>
@@ -178,7 +205,9 @@ const Section4 = () => {
         >
           <div className="absolute top-0 w-full h-full pointer-events-none -left-[100%] bg-black/50 gridSection grid6" />
           <div className="absolute top-0 left-0 w-full h-full pointer-events-none bg-black/50 gridSection grid5" />
-          <div className="absolute bottom-0 left-0 w-full p-6 h-fit">
+
+          {/* text 3 */}
+          <div className="absolute bottom-0 left-0 w-full p-6 h-fit textSection">
             <span className="text-[#ffffff80] text-xs font-medium">
               SERVICE DETAILS
             </span>
