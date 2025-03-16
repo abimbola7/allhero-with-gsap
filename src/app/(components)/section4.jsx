@@ -6,10 +6,6 @@ import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import CSSRulePlugin from "gsap/CSSRulePlugin";
-import ScrollTrigger from "gsap/ScrollTrigger";
-// import ScrollTrigger from 'gsap-trial/ScrollTrigger'
-
-// gsap.registerPlugin(ScrollTrigger)
 
 gsap.registerPlugin(CSSRulePlugin);
 

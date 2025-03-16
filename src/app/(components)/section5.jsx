@@ -1,102 +1,65 @@
 "use client";
-// import Image from 'next/image'
-// import React from 'react'
-
-// const Section5 = () => {
-//   return (
-//     // <div className="w-full h-fit">
-//       <div className="w-full h-fit relative  bg-[#181818] flex flex-row">
-//         <div className="bg-black h-[120vh] relative flex-[0_1_66.66666%] w-[66.66666%]">
-
-
-//         </div>
-
-//         <div className='relative flex-[0_1_33.33333%] w-[33.33333%]'>
-//           <div className="py-20 -left-[40%] absolute top-0">
-//             <img
-//             src={"https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/career.jpg"}
-//             alt="career"
-//             className="w-[150%] h-auto"
-//             />
-//           </div>
-//         </div>
-//       </div>
-//     // </div>
-//   )
-// }
-
-// export default Section5
-
-
 import React from "react";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Branch from "./ui/branch";
 import Button from "./ui/button";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Section3 = () => {
   const containerRef = React.useRef(null);
-  const timeline = React.useRef(null);
-  const timeline1 = React.useRef(null)
-  // const { contextSafe } = useGSAP(
-  //   () => {
-  //     const redSection = gsap.utils.toArray(".redSection")
-  //     // console.log(redSection);
-  //     const section3 = document.getElementById("section3");
-  //     const leftImage = gsap.utils.toArray(".leftImage");
-  //     // console.log(leftImage);
-  //     timeline.current = gsap
-  //       .timeline({
-  //         scrollTrigger: {
-  //           trigger: section3,
-  //           start: "100px bottom",
-  //           toggleActions: "play none none reset",
-  //           markers: false,
-  //         },
-  //       })
-  //       .from(leftImage, {
-  //         opacity: 0,
-  //         x: -200,
-  //         duration: 0.5,
-  //         delay: 0.16,
-  //         // ease : "power4.out",
-  //         stagger: -0.15,
-  //       });
-
-  //     timeline1.current = gsap.timeline({
-  //       scrollTrigger : {
-  //         trigger : section3,
-  //         start : "top bottom",
-  //         toggleActions: "play none none reset",
-  //         // markers: true,
-  //       }
-  //     }).from(redSection, {
-  //       opacity : 0,
-  //       x : -200,
-  //       duration : .4,
-  //       delay: .15,
-  //       stagger : .15
-  //     })
-  //   },
-  //   {
-  //     scope: containerRef,
-  //   }
-  // );
+  const timeline  = React.useRef(null);
+  
+  const { contextSafe } = useGSAP(() => {
+    const careerText = gsap.utils.toArray(".careerText");
+    careerText.forEach((text, i) => {
+      const hasCareerSection = text.classList.contains("careerSection");
+      gsap.from(text, {
+        opacity : 0,
+        duration : hasCareerSection ? "1" : ".4",
+        xPercent : -50,
+        scrollTrigger : {
+          trigger : text,
+          start: "top bottom",
+          toggleActions: "play none none reset",
+          // markers : true,
+        }
+      })
+    })
+  }, {
+    
+  })
   return (
     <div
-      className="w-full h-fit bg-[#181818] grid grid-cols-3"
+      className="w-full h-fit bg-[#181818] grid grid-cols-3 relative"
       id="section3"
       ref={containerRef}
     >
+      <Branch title={"CAREER"} id={1} className={"careerSection absolute top-40 -left-10 -rotate-90 careerText"}/>
       <div className="col-span-2 overflow-hidden">
-        <div className="w-full h-[110vh] bg-[#000] flex pt-36 border">
-          
+        <div className="w-full min-h-[100vh] bg-[#000] flex py-20">
+          <div className="w-full max-w-[16rem] ml-40 flex flex-col !justify-center items-center">
+            <h1 
+            className="text-[80px] text-white font-semibold text-center leading-[1.2] careerText">
+              Be your own &#34;HERO&#34;
+            </h1>
+
+            <p className="px-3 mt-10 text-lg font-medium text-center text-white careerText">By working at ALL-IN, Make yourself a value reduction</p>
+            <p className="text-[#ffffff80] text-sm mt-5 careerText">
+            It&apos;s worth offering because you. Because you are a person who can save you. ALL-IN requires “ Hero ” in various occupations.
+            </p>
+            <Button
+            className={"mx-auto"}
+            // className={"mx-auto"}
+            >
+              Go to Careers
+            </Button>
+          </div>
         </div>
       </div>
-      <div className="relative w-full">
+      <div className="relative w-full h-fit">
         <div className="w-[150%] relative leftImage z-[10]">
           <img
             src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/career.jpg"
