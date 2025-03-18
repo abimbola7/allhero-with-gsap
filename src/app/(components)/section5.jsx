@@ -37,7 +37,7 @@ const Section3 = () => {
       id="section3"
       ref={containerRef}
     >
-      <Branch title={"CAREER"} id={1} className={"careerSection absolute top-40 -left-10 -rotate-90 careerText"}/>
+      <Branch title={"CAREER"} id={3} className={"careerSection absolute top-40 -left-10 -rotate-90 careerText"}/>
       <div className="col-span-2 overflow-hidden">
         <div className="w-full min-h-[100vh] bg-[#000] flex py-20">
           <div className="w-full max-w-[16rem] ml-40 flex flex-col !justify-center items-center">

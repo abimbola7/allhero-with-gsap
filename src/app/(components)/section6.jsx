@@ -3,10 +3,34 @@
 import { useRef } from "react";
 import Branch from "./ui/branch";
 import Button from "./ui/button";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 
 const Section6 = () => {
   const containerRef = useRef(null);
+  const timeline = useRef(null);
+  const { contextSafe } = useGSAP(
+    () => {
+      const section6 = document.getElementById("section6");
+      timeline.current = gsap.timeline({
+        scrollTrigger : {
+          trigger : section6,
+          start : "8% bottom",
+          toggleActions : "play none none reset",
+          // markers : true
+        }
+      }).from(".careerSect", {
+        opacity : 0,
+        x : -300,
+        duration : .5,
+        stagger : -0.1
+      })
+    }
+  )
   return (
     <div
       className="w-full h-fit bg-[#181818] grid grid-cols-3 relative pt-20"
@@ -14,11 +38,11 @@ const Section6 = () => {
       ref={containerRef}
     >
       <Branch 
-      title={"CAREER"} 
-      id={1} 
-      className={"absolute top-40 right-0 -rotate-90"}/>
+      title={"RECRUITMENT MEDIA"} 
+      id={4} 
+      className={"absolute top-72 -right-20 -rotate-90 careerText"}/>
       <div className="relative w-full h-fit">
-        <div className="w-[165%] relative leftImage z-[10]">
+        <div className="w-[165%] relative leftImage z-[10] careerSect">
           <img
             src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/umplex-960x960-c-center.jpg"
             alt=""
@@ -27,22 +51,22 @@ const Section6 = () => {
         </div>
       </div>
       <div className="col-span-2 overflow-hidden">
-        <div className="w-full min-h-[100vh] bg-[#640000] flex py-20 !justify-end pr-[25%]">
-          <div className="w-full max-w-[16rem] ml-40 flex flex-col !justify-center items-center">
+        <div className="w-full min-h-[100vh] bg-[#640000] flex py-20 !justify-end pr-[15%] careerSect">
+          <div className="w-full max-w-[22rem] ml-40 flex flex-col !justify-center items-center mt-40 py-5">
             <h1 
-            className="text-[80px] text-white font-semibold text-center leading-[1.2]">
-              Be your own &#34;HERO&#34;
+            className="text-8xl text-white font-semibold text-center leading-[1.2] careerText">
+              Umplex
             </h1>
 
-            <p className="px-3 mt-10 text-lg font-medium text-center text-white">By working at ALL-IN, Make yourself a value reduction</p>
-            <p className="text-[#ffffff80] text-sm mt-5">
-            It&apos;s worth offering because you. Because you are a person who can save you. ALL-IN requires “ Hero ” in various occupations.
+            <p className="mt-20 text-xl font-semibold tracking-wider text-center text-white careerText">A meeting place that is not obsessed with prejudice</p>
+            <p className="text-[#ffffff80] text-sm mt-8 leading-8 careerText">
+            Umplex is a whole new form of job listing site with emotions on its search axis. &#34;What kind of movie should I watch today?&#34; You can enjoy the joy of meeting yourself with a warm feeling as when you look at the movie theater posters.
             </p>
             <Button
-            className={"mx-auto"}
+            className={"mx-auto !mt-12"}
             // className={"mx-auto"}
             >
-              Go to Careers
+              Go to Umplex
             </Button>
           </div>
         </div>
