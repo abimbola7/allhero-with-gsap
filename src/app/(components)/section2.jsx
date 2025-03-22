@@ -54,7 +54,11 @@ const Section2 = () => {
   return (
     <div className="relative flex items-center justify-center w-full h-[120vh] overflow-hidden" id="section2">
       <div className='absolute top-0 -right-64 motto'>
-        <Staylowkey />
+        <Staylowkey
+        width={"900"}
+        height={"910"}
+        fill={"#0D0D0D"}
+        />
       </div>
       <div className='relative flex flex-col justify-start w-full max-w-6xl px-20 text-white gap-y-16 mainsection'>
         <div className='absolute top-0 left-0 uppercase text-[#ffffff80] text-[.7rem] transition-transform -rotate-90 duration-500 translate-y-8 font-extrabold tracking-wider -translate-x-7 minislogan'>
