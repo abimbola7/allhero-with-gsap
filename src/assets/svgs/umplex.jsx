@@ -3,7 +3,7 @@ import React from 'react'
 
 const Umplex = () => {
   return (
-    <svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1819.25 2387.65">
+    <svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1819.25 2387.65" width={"50"} height={"50"}  className='transition-colors duration-200 cursor-pointer fill-white/50'>
       <defs>
       </defs>
       <g id="_レイヤー_3" data-name="レイヤー 3">

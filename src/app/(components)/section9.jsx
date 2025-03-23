@@ -8,6 +8,11 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 import Staylowkey from '@/assets/svgs/staylowkey'
 import IconSvg from '@/assets/svgs/iconsvg'
 import Umplex from '@/assets/svgs/umplex'
+import Note from '@/assets/svgs/note'
+import Wanted from '@/assets/svgs/wanted'
+import { FaPinterest } from "react-icons/fa";
+import { CiFacebook } from "react-icons/ci";
+import { IoLogoInstagram } from "react-icons/io";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -83,10 +88,15 @@ const Section9 = () => {
             }
           </div>
         </div>
-      </div>
-      <div className='flex flex-col items-end justify-center relative z-[10] border w-full'>
-        <div className='flex flex-row items-center space-x-3 text-white'>
-          <Umplex />
+        <div className='flex flex-col items-end justify-center relative z-[10] w-full'>
+          <div className='flex flex-row items-center space-x-3'>
+            <Umplex />
+            <Note />
+            <Wanted />
+            <FaPinterest className="cursor-pointer" color={"rgb(255 255 255 / 0.5)"} size={24}/>
+            <CiFacebook className="cursor-pointer" color={"rgb(255 255 255 / 0.5)"} size={24}/>
+            <IoLogoInstagram className="cursor-pointer" color={"rgb(255 255 255 / 0.5)"} size={24}/>
+          </div>
         </div>
       </div>
     </div>
