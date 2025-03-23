@@ -18,3 +18,8 @@ square {
   border-bottom: 40px solid transparent;
   border-top: 40px solid transparent;
 }
+
+.umplex-cls-1 {
+  fill: #fff;
+  stroke-width: 0px;
+}
