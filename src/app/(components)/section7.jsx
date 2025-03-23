@@ -11,36 +11,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Section7 = () => {
   const timeline = React.useRef()
-  const timeline1 = React.useRef()
   const section7 = React.useRef()
 
   const { contextSafe } = useGSAP(() => {
-    const gridItems = gsap.utils.toArray(".gri-items")
-    const gridItems1 = gsap.utils.toArray(".gri-items.one")
-    timeline1.current = gsap.timeline({
-      defaults : {
-        duration : .2
-      }
-    }).set(".grid-hover", {
-      opacity:0
-    })
-    
-    gridItems1.forEach((item) => {
-      const child = item.querySelectorAll(".grid-hover")
-      
-      item.addEventListener("mouseenter", contextSafe(() => {
-        timeline1.current.to(child, {
-          opacity : 1
-        })
-      }))
-      
-      item.addEventListener("mouseleave", contextSafe(() => {
-        timeline.current?.clear();
-        timeline1.current.set(child, {
-          opacity : 0
-        })
-      }))
-    })
+    const gridItems = gsap.utils.toArray(".gri-items");
     
     
     timeline.current = gsap.timeline({
@@ -63,10 +37,12 @@ const Section7 = () => {
   return (
     <div className="w-full min-h-screen bg-[#181818]">
       <div className="grid w-full h-full max-w-6xl grid-cols-4 py-12 mx-auto justify-items-center gap-7" ref={section7}>
-        <div className="relative flex flex-col w-full col-span-2 gri-items one">
+        <div className="relative flex flex-col w-full col-span-2 gri-items group">
           <div className="relative w-full cursor-pointer">
-            <div className='absolute top-0 left-0 flex w-full h-full bg-black/20 grid-hover'>
-              
+            <div className='absolute top-0 left-0 flex items-center justify-center w-full h-full transition-all duration-200 opacity-0 bg-black/20 grid-hover group-hover:opacity-100'>
+              <p className="text-sm font-bold text-white transition-all duration-200 -translate-x-[50%] group-hover:translate-x-0 tracking-wide">
+                VIEW
+              </p>
             </div>
             <div className="py-11 px-8 bg-[#640000] w-fit absolute top-0 left-0 text-white text-sm font-semibold z-20">
               <p>Career News Press</p>
@@ -97,10 +73,12 @@ const Section7 = () => {
 
           </div>
         </div>
-        <div className="flex flex-col w-full gri-items one">
+        <div className="flex flex-col w-full gri-items group">
           <div className="relative w-full">
-            <div className='absolute top-0 left-0 flex w-full h-full bg-black/20 grid-hover'>
-            
+            <div className='absolute top-0 left-0 flex items-center justify-center w-full h-full transition-all duration-200 opacity-0 bg-black/20 grid-hover group-hover:opacity-100'>
+              <p className="text-xs font-bold text-white transition-all duration-200 -translate-x-[50%] group-hover:translate-x-0 tracking-wide">
+                VIEW
+              </p>
             </div>
             <div className="p-8 bg-[#640000] w-fit absolute top-0 left-0 text-white text-sm font-semibold">
               <p>News</p>
