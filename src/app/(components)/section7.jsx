@@ -5,7 +5,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import Link from 'next/link';
-import Staylowkey from './svgs/staylowkey';
+import Staylowkey from '@/assets/svgs/staylowkey';
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -3,10 +3,12 @@ import React from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import Image from 'next/image'
-import Motto from './svgs/motto'
-import Icon from './svgs/icon'
+
+// import Icon from './svgs/icon'
 import { TfiAngleLeft } from "react-icons/tfi";
 import ScrollToPlugin from 'gsap/ScrollToPlugin'
+import Motto from '@/assets/svgs/motto'
+import IconSvg from '@/assets/svgs/iconsvg'
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -68,7 +70,7 @@ const Slider2 = () => {
     <div className='relative overflow-x-hidden' ref={container}>
       <div className="absolute z-[10] w-full h-full flex items-center justify-center overflow-hidden">
         <div className='absolute top-0 left-0 p-14'>
-          <Icon
+          <IconSvg
           fill={"#B30606"}
           height={"160"}
           width={"160"}

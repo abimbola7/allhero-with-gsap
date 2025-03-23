@@ -4,8 +4,9 @@ import { useSelector, useDispatch } from 'react-redux'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Icon from './svgs/icon';
+
 import Hamburger from './hamburger';
+import IconSvg from '@/assets/svgs/iconsvg';
 
 
 
@@ -87,7 +88,7 @@ const Header = () => {
           <header className='fixed w-full z-[100000] top-0 left-0' ref={headerRef}>
             <div className='absolute top-0 left-0 flex items-end justify-between w-full h-full px-8 logo'>
               <div className='icon'>
-                <Icon
+                <IconSvg
                 fill={"#fff"}
                 height={"70"}
                 width={"70"}

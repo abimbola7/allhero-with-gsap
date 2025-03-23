@@ -1,10 +1,11 @@
 "use client"
 
 import React from 'react'
-import Staylowkey from './svgs/staylowkey'
+// import Staylowkey from './svgs/staylowkey'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import Staylowkey from '@/assets/svgs/staylowkey'
 
 gsap.registerPlugin(ScrollTrigger)
 
