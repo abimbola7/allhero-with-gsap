@@ -30,7 +30,7 @@ const Header = () => {
 
   useGSAP(() => {
     const section2 = document.querySelector("#section2");
-    const header = gsap.utils.toArray(".header") || null;
+    const header = gsap.utils.toArray(".header");
     console.log(header);
     const tl = gsap.timeline({
       scrollTrigger : {
@@ -86,28 +86,31 @@ const Header = () => {
     <>
       {
         status && (
-          <header className='fixed w-full z-[100000] top-0 left-0 border border-red-500' ref={headerRef}>
-            {/* <div className='absolute top-0 left-0 flex items-end justify-between w-full h-full px-8 logo'>
-              <div className='icon'>
+          <div className='relative'>
+            <div className='fixed flex items-end justify-between w-full px-8 h-fit left-0 logo top-0 z-[100]'>
+              <div className='icon relative z-[1000]'>
                 <IconSvg
                 fill={"#fff"}
                 height={"70"}
                 width={"70"}
-                key={2}   
+                key={2}
+                
                 />  
               </div>
               <Hamburger />
-            </div> */}
-            <div className='max-w-[95%] mx-auto flex items-center justify-end space-x-12 font-bold uppercase text-white pb-4 pt-16 text-sm border'>
-              <div className='header'>about</div>
-              <div className='header'>service</div>
-              <div className='header'>work</div>
-              <div className='header'>company</div>
-              <div className='header'>career</div>
-              <div className='header'>news</div>
-              <div className='header'>contact</div>
             </div>
-          </header> 
+            <header className='fixed w-full z-[100000] top-0 left-0' ref={headerRef}>
+              <div className='max-w-[95%] mx-auto hidden tab:flex items-center justify-end space-x-12 font-bold uppercase text-white pb-4 pt-16 text-sm'>
+                <div className='header'>about</div>
+                <div className='header'>service</div>
+                <div className='header'>work</div>
+                <div className='header'>company</div>
+                <div className='header'>career</div>
+                <div className='header'>news</div>
+                <div className='header'>contact</div>
+              </div>
+            </header> 
+          </div>
         )    
       }
     </>
