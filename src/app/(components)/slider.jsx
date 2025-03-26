@@ -15,7 +15,7 @@ const Slider = () => {
   return (
     <div className='grid w-full h-screen grid-cols-1 overflow-hidden tab:grid-cols-2 section1'>
       <Slider2 />
-      {/* <Slider1 /> */}
+      <Slider1 />
     </div>
   )
 }

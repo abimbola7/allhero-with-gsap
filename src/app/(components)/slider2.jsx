@@ -67,8 +67,8 @@ const Slider2 = () => {
   })
 
   return (
-    <div className='relative overflow-x-hidden' ref={container}>
-      <div className="absolute z-[10] w-full h-full flex items-center justify-center overflow-hidden border border-red-500">
+    <div className='relative h-[80vh] overflow-x-hidden tab:h-full' ref={container}>
+      <div className="absolute z-[10] w-full h-full flex items-center justify-center overflow-hidden ">
         <div className='absolute top-0 left-0 p-14'>
           <IconSvg
           fill={"#B30606"}
