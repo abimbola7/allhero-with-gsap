@@ -31,7 +31,7 @@ const Header = () => {
   useGSAP(() => {
     const section2 = document.querySelector("#section2");
     const header = gsap.utils.toArray(".header");
-    console.log(header);
+    
     const tl = gsap.timeline({
       scrollTrigger : {
         trigger : section2,
@@ -52,31 +52,38 @@ const Header = () => {
   })
 
   useGSAP(()=>{
+    const mm  = gsap.matchMedia()
     const section2 = document.querySelector("#section2");
     const hamburger = gsap.utils.toArray(".hamburger");
-    gsap.timeline({
-      scrollTrigger : {
-        trigger : section2,
-        start : "top 21%",
-        end : "1% top",
-        toggleActions : "play none reverse none",
-        // scrub : 2,
-        // markers : true  
-      }
+    mm.add("(min-width: 991px)", () => {
+      const tl1 = gsap.timeline({
+        scrollTrigger : {
+          trigger : section2,
+          start : "top 21%",
+          end : "1% top",
+          toggleActions : "play none reverse none",
+          // scrub : 2,
+          // markers : true  
+        }
+      })
+      .from(".icon", {
+        x : -100,
+        ease : "expo.inOut",
+        duration : 1,
+        opacity : 0
+      },0)
+      .from(".hamburger", {
+        x : 100,
+        duration : .3,
+        opacity : 100,
+        stagger : -.05,
+        ease : "expo.inOut"
+      },0)
     })
-    .from(".icon", {
-      x : -100,
-      ease : "expo.inOut",
-      duration : 1,
-      opacity : 0
-    },0)
-    .from(".hamburger", {
-      x : 100,
-      duration : .3,
-      opacity : 100,
-      stagger : -.05,
-      ease : "expo.inOut"
-    },0)
+
+    return () => {
+      mm.revert();
+    }
   }, {
     dependencies : [status]
   })
@@ -87,16 +94,16 @@ const Header = () => {
       {
         status && (
           <div className='relative'>
-            <div className='fixed flex items-end justify-between w-full px-8 h-fit left-0 logo top-0 z-[100]'>
+            <div className='fixed flex items-end justify-between w-full px-8 h-fit left-0 logo top-0 z-[100] border'>
               <div className='icon relative z-[1000]'>
                 <IconSvg
                 fill={"#fff"}
                 height={"70"}
                 width={"70"}
                 key={2}
-                
                 />  
               </div>
+
               <Hamburger />
             </div>
             <header className='fixed w-full z-[100000] top-0 left-0' ref={headerRef}>
