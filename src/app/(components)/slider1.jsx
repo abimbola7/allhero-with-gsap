@@ -66,7 +66,7 @@ const Slider1 = () => {
 
   return (
     <div className='relative overflow-x-hidden' ref={container}>
-      <div className='w-full h-[80vh] relative overflow-x-hidden'>
+      <div className='w-full h-[80vh] relative overflow-x-hidden hidden tab:block'>
         <div className='overflow-hidden imgt img1 white'>
         <Image
           src={'https://res.cloudinary.com/dmkjaieb2/image/upload/v1721149993/first_xvuf2n.png'}
