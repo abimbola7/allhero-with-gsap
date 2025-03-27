@@ -13,7 +13,7 @@ export default function Home() {
   // const scrollRef = React.useRef(null);
 
   return (
-    <div className="">
+    <div className="w-full">
       <Slider />
       <Section2 />
       <Section3 />

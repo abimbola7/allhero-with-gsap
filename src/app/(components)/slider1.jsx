@@ -112,7 +112,7 @@ const Slider1 = () => {
           />
         </div>      
       </div>
-      <div className='h-[20vh] w-full bg-white flex items-center justify-left font-semibold text-2xl px-10 space-x-20'>
+      <div className='h-[20vh] w-full bg-white flex items-center justify-between font-semibold text-2xl px-10 space-x-20'>
         <p>Recruitment Advertising Agency</p>
         <div className="flex items-center justify-center space-x-20 text-[.7rem] font-semibold tracking-widest uppercase">
           <p>hero</p>
