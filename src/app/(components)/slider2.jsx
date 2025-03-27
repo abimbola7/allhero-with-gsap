@@ -68,20 +68,21 @@ const Slider2 = () => {
 
   return (
     <div className='relative h-[80vh] overflow-x-hidden tab:h-full' ref={container}>
-      <div className="absolute z-[10] w-full h-full flex items-center justify-center overflow-hidden ">
-        <div className='absolute top-0 left-0 p-14'>
+      <div className="absolute z-[10] w-full h-full flex items-center justify-center overflow-hidden">
+        <div className='absolute top-0 left-0 p-4 tab:p-10'>
           <IconSvg
           fill={"#B30606"}
-          height={"160"}
-          width={"160"}
+          height={"auto"}
+          width={"auto"}
+          className='w-[85px] h-[85px] tab:w-[140px] tab:h-[140px]'
           key={"1"}
           />
         </div>
-        <div className='absolute flex items-center space-x-8 tracking-wider text-white transition-transform -rotate-90 -left-4 bottom-40 '>
+        <div className='absolute flex items-center space-x-3 tracking-wider text-white transition-transform -rotate-90 tab:space-x-8 -left-12 tab:-left-4 bottom-20 tab:bottom-40 '>
           <div onClick={scrollToView} className='p-3 border rounded-full border-[hsla(0,0%,100%,.3)] cursor-pointer'>
-            <TfiAngleLeft size={16}/>
+            <TfiAngleLeft className='w-2 h-2 tab:w-5 tab:h-5'/>
           </div>
-          <p className='text-sm font-bold tracking-wider'>Scroll to web site</p>
+          <p className='text-xs font-bold tracking-wider tab:text-sm'>Scroll to web site</p>
         </div>
         <div className='mt-20'>
           <Motto />

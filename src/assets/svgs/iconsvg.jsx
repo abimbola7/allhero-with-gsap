@@ -1,9 +1,9 @@
 "use client"
 import React from 'react'
 
-const IconSvg = ({ width, height, fill }) => {
+const IconSvg = ({ width, height, fill, className }) => {
   return (
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 125.78 125.77996" width={width} height={height} fill={fill}>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 125.78 125.77996" width={width} height={height} fill={fill} className={className}>
         <g>
           <polygon points="57.00131,49.0317 53.61448,60.54418 73.26504,60.54418 69.90578,49.0317"></polygon>
           <polygon points="63.63779,27.55045 63.3209,27.55045 58.87905,42.64915 68.04354,42.64915"></polygon>
