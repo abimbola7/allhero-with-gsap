@@ -85,7 +85,11 @@ const Slider2 = () => {
           <p className='text-xs font-bold tracking-wider tab:text-sm'>Scroll to web site</p>
         </div>
         <div className='mt-20'>
-          <Motto />
+          <Motto
+          height={"auto"}
+          width={"auto"}
+          className={"w-[200px] h-[250px] tab:w-[250px] tab:h-[300px]"}
+          />
         </div>
       </div>
       <div className='relative w-full h-full overflow-x-hidden'>
