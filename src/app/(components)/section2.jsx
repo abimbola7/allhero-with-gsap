@@ -53,8 +53,8 @@ const Section2 = () => {
     scope : section2Ref
   })
   return (
-    <div className="relative flex items-center justify-center w-full h-fit py-20 tab:py-0 tab:h-[120vh] overflow-hidden px-6" id="section2">
-      <div className='absolute bottom-0 transition-all duration-200 -left-0 tab:top-0 tab:bottom-auto tab:left-auto tab:-right-64 motto'>
+    <div className="relative flex items-center justify-center w-full h-fit py-20 tab:py-0 tab:h-[120vh] overflow-hidden px-0 md:px-6" id="section2">
+      <div className='absolute bottom-0 -left-0 tab:top-0 tab:bottom-auto tab:left-auto tab:-right-64 motto'>
         <Staylowkey
         className="w-[283x] h-[296px] tab:w-[900px] tab:h-[910px]"
         width={"auto"}
@@ -62,8 +62,8 @@ const Section2 = () => {
         fill={"#0D0D0D"}
         />
       </div>
-      <div className='relative flex flex-col justify-start w-full max-w-3xl px-6 text-white tab:px-0 tab:max-w-6xl gap-y-5 tab:gap-y-16 mainsection'>
-        <div className='relative tab:absolute top-0 left-0 uppercase text-[#ffffff80] text-[.7rem] transition-transform tab:-rotate-90 duration-500 tab:translate-y-8 font-extrabold tracking-wider tab:-translate-x-7 minislogan'>
+      <div className='relative flex flex-col justify-start w-full max-w-3xl px-2 text-white tab:px-0 tab:max-w-4xl gap-y-5 tab:gap-y-16 mainsection'>
+        <div className='relative tab:absolute top-0 -left-16 uppercase text-[#ffffff80] text-[.7rem] tab:-rotate-90 tab:translate-y-8 font-extrabold tracking-wider tab:-translate-x-7 minislogan border'>
           our slogan
         </div>
         <div className='flex flex-col gap-y-6 slogan'>
