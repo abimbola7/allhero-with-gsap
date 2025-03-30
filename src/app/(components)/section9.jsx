@@ -58,21 +58,22 @@ const Section9 = () => {
     // scope : section9Ref
   })
   return (
-    <div className="relative flex items-center justify-center w-full h-[120vh] overflow-hidden px-3 flex-col" id="section9">
-      <div className='absolute top-0 -left-10 motto1'>
+    <div className="relative flex items-center justify-center w-full py-24 h-fit tab:h-[120vh] overflow-hidden px-3 flex-col" id="section9">
+      <div className='absolute bottom-0 left-0 tab:top-0 tab:left-10 motto1 tab:bottom-auto'>
         <Staylowkey
-        width={"900"}
-        height={"910"}
+        className="w-[283x] h-[296px] tab:w-[900px] tab:h-[910px]"
+        width={"auto"}
+        height={"auto"}
         fill={"#0D0D0D"}
         />
       </div>
       <div className="w-full max-w-6xl relative z-[10] mx-auto ">
-        <div className='flex items-center justify-between py-12 border-b-[.1px] border-b-[#262626]'>
+        <div className='flex items-center justify-center tab:justify-between py-12 border-b-[.1px] border-b-[#262626]'>
           <div className=''>
             <img src="/icon.png" alt="" className="w-[95px] h-[95px]" />
           </div>
 
-          <div className='flex items-center space-x-12 text-xs font-bold tracking-wide uppercase text-white/50'>
+          <div className='items-center hidden space-x-12 text-xs font-bold tracking-wide uppercase tab:flex text-white/50'>
             {
               [
                 ["ABOUT"],
@@ -88,7 +89,7 @@ const Section9 = () => {
             }
           </div>
         </div>
-        <div className='flex flex-col items-end justify-center relative z-[10] w-full'>
+        <div className='flex tab:flex-col items-center justify-center relative z-[10] w-full'>
           <div className='flex flex-row items-center space-x-3'>
             <Umplex />
             <Note />
