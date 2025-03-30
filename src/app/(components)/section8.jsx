@@ -118,7 +118,7 @@ const Section8 = () => {
   return (
     <div className="w-full min-h-screen bg-[#181818] pt-16 pb-20 section8">
       <div
-        className="w-full max-w-[1440px] mx-auto grid grid-cols-3"
+        className="w-full max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3"
         ref={gridRef}
         onMouseLeave={mouseLeave}
       >
@@ -146,7 +146,7 @@ const Section8 = () => {
           <Image
             src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/sub01.jpg"
             alt="service-details"
-            className=""
+            className="w-full"
             quality={100}
             priority
             width={500}
@@ -173,7 +173,7 @@ const Section8 = () => {
           <Image
             src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/sub02.jpg"
             alt="service-details"
-            className=""
+            className="w-full"
             quality={100}
             priority
             width={500}
@@ -204,7 +204,7 @@ const Section8 = () => {
           <Image
             src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/sub03.jpg"
             alt="service-details"
-            className=""
+            className="w-full"
             quality={100}
             priority
             width={500}

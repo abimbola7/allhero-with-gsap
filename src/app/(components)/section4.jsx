@@ -121,7 +121,7 @@ const Section4 = () => {
         <Branch title={"SERVICE"} id={2} className={"py-10"} />
       </div>
       <div
-        className="w-full max-w-[1440px] mx-auto grid grid-cols-3"
+        className="w-full max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3"
         ref={gridRef}
         onMouseLeave={mouseLeave}
       >
@@ -154,7 +154,7 @@ const Section4 = () => {
           <Image
             src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/service_details02.jpg"
             alt="service-details"
-            className=""
+            className="w-full"
             quality={100}
             priority
             width={500}
@@ -186,7 +186,7 @@ const Section4 = () => {
           <Image
             src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/service_details03.jpg"
             alt="service-details"
-            className=""
+            className="w-full"
             quality={100}
             priority
             width={500}
@@ -221,7 +221,7 @@ const Section4 = () => {
           <Image
             src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/service_details01.jpg"
             alt="service-details"
-            className=""
+            className="w-full"
             quality={100}
             priority
             width={500}
