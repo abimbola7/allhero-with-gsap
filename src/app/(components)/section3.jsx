@@ -10,9 +10,9 @@ import Button from "./ui/button";
 gsap.registerPlugin(ScrollTrigger);
 
 const Section3 = () => {
-  // const containerRef = React.useRef(null);
-  // const timeline = React.useRef(null);
-  // const timeline1 = React.useRef(null)
+  const containerRef = React.useRef(null);
+  const timeline = React.useRef(null);
+  const timeline1 = React.useRef(null)
   // const { contextSafe } = useGSAP(
   //   () => {
   //     const redSection = gsap.utils.toArray(".redSection")
@@ -72,35 +72,66 @@ const Section3 = () => {
     //       />
     //     </div>
     //   </div>
-    //   <div className="overflow-hidden tab:col-span-2">
-    //     <div className="w-full h-full bg-[#640000] flex items-start justify-end pt-36 pr-16 pl-[50%] pb-20">
-    //       <div className="flex flex-col w-full max-w-[22rem] space-y-6 h-fit">
-    //         <Branch title={"IDEOLOGY"} id={1} className={"redSection"}/>
-    //         <h1 className="font-extrabold text-white text-7xl redSection">RED</h1>
-    //         <h2 className="text-lg font-medium tracking-wide text-white redSection">
-    //           The color of the bond, betting everything.
-    //         </h2>
-    //         <p className="text-[#ffffff80] font-medium text-base leading-loose redSection">
-    //           Red is one of the three colors and is said to be a color that
-    //           increases the sensitivity of people even more. Shake
-    //           sensibilities, enhance your feelings, and evoke action. That
-    //           trigger is the significance, and Red says, the color of the bond
-    //           between ALL-IN and the customer . Whether it looks clumsy from the
-    //           side or far from economic rationality, we bet everything for our
-    //           customers.
-    //         </p>
+      // <div className="overflow-hidden tab:col-span-2">
+      //   <div className="w-full h-full bg-[#640000] flex items-start justify-end pt-36 pr-16 pl-[50%] pb-20">
+      //     <div className="flex flex-col w-full max-w-[22rem] space-y-6 h-fit">
+      //       <Branch title={"IDEOLOGY"} id={1} className={"redSection"}/>
+      //       <h1 className="font-extrabold text-white text-7xl redSection">RED</h1>
+      //       <h2 className="text-lg font-medium tracking-wide text-white redSection">
+      //         The color of the bond, betting everything.
+      //       </h2>
+      //       <p className="text-[#ffffff80] font-medium text-base leading-loose redSection">
+      //         Red is one of the three colors and is said to be a color that
+      //         increases the sensitivity of people even more. Shake
+      //         sensibilities, enhance your feelings, and evoke action. That
+      //         trigger is the significance, and Red says, the color of the bond
+      //         between ALL-IN and the customer . Whether it looks clumsy from the
+      //         side or far from economic rationality, we bet everything for our
+      //         customers.
+      //       </p>
 
             
-    //         <Button>
-    //           Go to About
-    //         </Button>
-    //       </div>
-    //     </div>
-    //   </div>
+      //       <Button>
+      //         Go to About
+      //       </Button>
+      //     </div>
+      //   </div>
+      // </div>
     // </div>
 
-    <div className="">
-      
+    <div 
+    className="flex flex-col w-full"
+    id="section3"
+    ref={containerRef}
+    >
+        <div className="overflow-hidden h-full relative pt-[calc(20%+50px)]">
+          <div className="w-full border h-full absolute top-0 left-0 bg-[#181818]">
+            <img src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/about-1125x750-c-center.jpg" alt="" className="object-center object-cover relative w-[90%] z-[10000]"/>
+          </div>
+          <div className="w-full h-full bg-[#640000] flex items-start justify-end pt-[calc(30%+50px)] tab:pr-16 tab:pl-[50%] pb-20 relative z-[10]">
+            <div className="flex flex-col w-full max-w-[22rem] space-y-6 h-fit">
+              <Branch title={"IDEOLOGY"} id={1} className={"redSection"}/>
+              <h1 className="font-extrabold text-white text-7xl redSection">RED</h1>
+              <h2 className="text-lg font-medium tracking-wide text-white redSection">
+                The color of the bond, betting everything.
+              </h2>
+              <p className="text-[#ffffff80] font-medium text-base leading-loose redSection">
+                Red is one of the three colors and is said to be a color that
+                increases the sensitivity of people even more. Shake
+                sensibilities, enhance your feelings, and evoke action. That
+                trigger is the significance, and Red says, the color of the bond
+                between ALL-IN and the customer . Whether it looks clumsy from the
+                side or far from economic rationality, we bet everything for our
+                customers.
+              </p>
+
+              
+              <Button>
+                Go to About
+              </Button>
+            </div>
+          </div>
+      </div>
     </div>
   );
 };

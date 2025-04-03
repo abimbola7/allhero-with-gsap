@@ -59,7 +59,7 @@ const Section7 = () => {
             <span className="font-bold text-black text-7xl">
               C
             </span>
-            <p className='text-xl font-bold tracking-wider text-black'>
+            <p className='text-base font-bold tracking-wider text-black md:text-xl'>
               New heroes with diverse personalities, such as creators and HR/CX strategic
             </p>
            </div>
