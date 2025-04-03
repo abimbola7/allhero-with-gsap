@@ -104,12 +104,12 @@ const Section3 = () => {
     id="section3"
     ref={containerRef}
     >
-        <div className="overflow-hidden h-full relative pt-[calc(20%+50px)]">
-          <div className="w-full border h-full absolute top-0 left-0 bg-[#181818]">
-            <img src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/about-1125x750-c-center.jpg" alt="" className="object-center object-cover relative w-[90%] z-[10000]"/>
+        <div className="overflow-hidden border h-full tab:h-[120vh] relative pt-[calc(20%+50px)] tab:pt-0 tab:flex">
+          <div className="w-full tab:w-[30%] border h-full tab:h-[150vh] absolute tab:relative top-0 left-0 bg-[#181818]">
+            <img src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/about-1125x750-c-center.jpg" alt="" className="object-center object-cover relative tab:absolute w-[90%] z-[10000]"/>
           </div>
-          <div className="w-full h-full bg-[#640000] flex items-start justify-end pt-[calc(30%+50px)] tab:pr-16 tab:pl-[50%] pb-20 relative z-[10]">
-            <div className="flex flex-col w-full max-w-[22rem] space-y-6 h-fit">
+          <div className="w-full tab:w-[70%] h-full bg-[#640000] flex items-start justify-end pt-[calc(30%+50px)] tab:pr-16  pb-20 relative z-[10]">
+            <div className="flex flex-col w-full tab:max-w-[22rem] space-y-6 h-fit px-14 mt-10">
               <Branch title={"IDEOLOGY"} id={1} className={"redSection"}/>
               <h1 className="font-extrabold text-white text-7xl redSection">RED</h1>
               <h2 className="text-lg font-medium tracking-wide text-white redSection">
