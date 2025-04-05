@@ -45,7 +45,7 @@ const Template = ({ children }) => {
  
   return (
     <>
-      <div className='fixed w-full h-full bg-black overlay z-[100] top-0 left-0'>
+      <div className='fixed w-full h-full bg-black overlay z-[10000] top-0 left-0'>
         <div className='flex items-center justify-center w-full h-full'>
           <img src='/icon.png' alt='img' className='object-cover iconn'/>
         </div>
