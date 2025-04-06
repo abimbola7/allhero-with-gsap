@@ -13,61 +13,70 @@ const Section3 = () => {
   const containerRef = React.useRef(null);
   const timeline = React.useRef(null);
   const timeline1 = React.useRef(null)
-  // const { contextSafe } = useGSAP(
-  //   () => {
-  //     const redSection = gsap.utils.toArray(".redSection")
-  //     // console.log(redSection);
-  //     const section3 = document.getElementById("section3");
-  //     const leftImage = gsap.utils.toArray(".leftImage");
-  //     // console.log(leftImage);
-  //     timeline.current = gsap
-  //       .timeline({
-  //         scrollTrigger: {
-  //           trigger: section3,
-  //           start: "100px bottom",
-  //           toggleActions: "play none none reset",
-  //           markers: false,
-  //         },
-  //       })
-  //       .from(leftImage, {
-  //         opacity: 0,
-  //         x: -200,
-  //         duration: 0.5,
-  //         delay: 0.16,
-  //         // ease : "power4.out",
-  //         stagger: -0.15,
-  //       });
+  const { contextSafe } = useGSAP(
+    () => {
+      const redSection = gsap.utils.toArray(".redSection")
+      const redSection1 = gsap.utils.toArray(".redSection1")
+      // console.log(redSection);
+      const section3 = document.getElementById("section3");
+      const leftImage = gsap.utils.toArray(".leftImage");
+      console.log(leftImage);
+      timeline.current = gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: section3,
+            start: "100px bottom",
+            toggleActions: "play none none reset",
+            markers: false,
+          },
+        })
+        .from(leftImage, {
+          opacity: 0,
+          x: -200,
+          duration: 0.5,
+          delay: 0.16,
+          // ease : "power4.out",
+          stagger: -0.15,
+        })
+        // .from(redSection1, {
+        //   opacity: 0,
+        //   x: -200,
+        //   duration: 0.8,
+        //   delay: 0.16,
+        //   // ease : "power4.out",
+        //   // stagger: -0.15,
+        // });
 
-  //     timeline1.current = gsap.timeline({
-  //       scrollTrigger : {
-  //         trigger : section3,
-  //         start : "top bottom",
-  //         toggleActions: "play none none reset",
-  //         // markers: true,
-  //       }
-  //     }).from(redSection, {
-  //       opacity : 0,
-  //       x : -200,
-  //       duration : .4,
-  //       delay: .15,
-  //       stagger : .15
-  //     })
-  //   },
-  //   {
-  //     scope: containerRef,
-  //   }
-  // );
+      timeline1.current = gsap.timeline({
+        scrollTrigger : {
+          trigger : section3,
+          start : "top bottom",
+          toggleActions: "play none none reset",
+          // markers: true,
+        }
+      }).from(redSection, {
+        opacity : 0,
+        x : -200,
+        duration : .4,
+        delay: .15,
+        stagger : .15
+      })
+    },
+    {
+      scope: containerRef,
+    }
+  );
   return (
     <div 
     className="flex flex-col w-full h-fit"
     id="section3"
     ref={containerRef}
     >
-        <div className="overflow-hidden h-full tab:h-[120vh] relative pt-[calc(20%+50px)] tab:pt-0 tab:flex">
+        <div className="overflow-hidden h-full tab:h-[120vh] relative pt-[calc(20%+50px)] tab:pt-0 flex flex-col tab:flex-row">
           <div className="w-full tab:w-[30%] h-full tab:h-[200vh] absolute tab:relative top-0 tab:top-36 left-0 bg-[#181818]">
-            <img src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/about-1125x750-c-center.jpg" alt="" className="object-center object-cover relative tab:absolute w-[90%] tab:w-[200%] z-[100] tab:max-w-none"/>
+            <img src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/about-1125x750-c-center.jpg" alt="" className="object-center object-cover relative tab:absolute w-[90%] tab:w-[200%] z-[100] tab:max-w-none leftImage"/>
           </div>
-          <div className="w-full tab:w-[70%] h-full bg-[#640000] flex items-start justify-end tab:justify-normal tab:pl-[calc(30%+50px)] pt-[calc(30%+50px)] tab:pt-32 pb-20 relative z-[10] tab:pr-8">
+          <div className="w-full tab:w-[70%] h-full bg-[#640000] flex items-start justify-end tab:justify-normal tab:pl-[calc(30%+50px)] pt-[calc(30%+50px)] tab:pt-32 pb-20 relative z-[10] tab:pr-8 leftImage">
             <div className="flex flex-col w-full tab:max-w-[30rem] space-y-6 h-fit px-14 tab:px-0 mt-10">
               <Branch title={"IDEOLOGY"} id={1} className={"redSection"}/>
               <h1 className="font-extrabold text-white text-7xl redSection">RED</h1>
