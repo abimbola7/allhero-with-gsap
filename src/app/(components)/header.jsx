@@ -7,6 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import Hamburger from './hamburger';
 import IconSvg from '@/assets/svgs/iconsvg';
+import Link from 'next/link';
 
 
 
@@ -109,7 +110,7 @@ const Header = () => {
             <header className='fixed w-full z-[100000] top-0 left-0' ref={headerRef}>
               <div className='max-w-[95%] mx-auto hidden tab:flex items-center justify-end space-x-12 font-bold uppercase text-white pb-4 pt-16 text-sm'>
                 <div className='header'>about</div>
-                <div className='header'>service</div>
+                <Link href="/services" className='header'>service</Link>
                 <div className='header'>work</div>
                 <div className='header'>company</div>
                 <div className='header'>career</div>
