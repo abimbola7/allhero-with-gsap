@@ -77,7 +77,7 @@ const Section3 = () => {
             <img src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/about-1125x750-c-center.jpg" alt="" className="object-center object-cover relative tab:absolute w-[90%] tab:w-[200%] z-[90] tab:max-w-none leftImage"/>
           </div>
           <div className="w-full tab:w-[70%] h-full bg-[#640000] flex items-start justify-end tab:justify-normal tab:pl-[calc(30%+50px)] pt-[calc(30%+50px)] tab:pt-32 pb-20 relative z-[10] tab:pr-8 leftImage">
-            <div className="flex flex-col w-full tab:max-w-[30rem] space-y-6 h-fit px-14 tab:px-0 mt-10">
+            <div className="flex flex-col w-full tab:max-w-[30rem] space-y-6 h-fit px-7 sm:px-14 tab:px-0 mt-10">
               <Branch title={"IDEOLOGY"} id={1} className={"redSection"}/>
               <h1 className="font-extrabold text-white text-7xl redSection">RED</h1>
               <h2 className="text-lg font-medium tracking-wide text-white redSection">

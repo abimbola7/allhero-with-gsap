@@ -22,7 +22,7 @@ const Section7 = () => {
         trigger: section7.current,
         start: "top bottom",
         toggleActions: "play none none reset",
-        markers: true,
+        // markers: true,
       },
     })
     .from(gridItems, {

@@ -116,7 +116,7 @@ const Section8 = () => {
   });
 
   return (
-    <div className="w-full min-h-screen bg-[#181818] pt-16 pb-20 section8">
+    <div className="w-full min-h-fit bg-[#181818] pt-16 section8">
       <div
         className="w-full max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3"
         ref={gridRef}
