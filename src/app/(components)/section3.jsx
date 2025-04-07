@@ -74,7 +74,7 @@ const Section3 = () => {
     >
         <div className="overflow-hidden h-full tab:h-[120vh] relative pt-[calc(20%+50px)] tab:pt-0 flex flex-col tab:flex-row">
           <div className="w-full tab:w-[30%] h-full tab:h-[200vh] absolute tab:relative top-0 tab:top-36 left-0 bg-[#181818]">
-            <img src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/about-1125x750-c-center.jpg" alt="" className="object-center object-cover relative tab:absolute w-[90%] tab:w-[200%] z-[100] tab:max-w-none leftImage"/>
+            <img src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/top/about-1125x750-c-center.jpg" alt="" className="object-center object-cover relative tab:absolute w-[90%] tab:w-[200%] z-[90] tab:max-w-none leftImage"/>
           </div>
           <div className="w-full tab:w-[70%] h-full bg-[#640000] flex items-start justify-end tab:justify-normal tab:pl-[calc(30%+50px)] pt-[calc(30%+50px)] tab:pt-32 pb-20 relative z-[10] tab:pr-8 leftImage">
             <div className="flex flex-col w-full tab:max-w-[30rem] space-y-6 h-fit px-14 tab:px-0 mt-10">

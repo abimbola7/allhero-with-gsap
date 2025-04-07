@@ -94,8 +94,8 @@ const Header = () => {
       {
         status && (
           <div className='relative'>
-            <div className='fixed flex items-end justify-between w-full px-8 h-fit left-0 logo top-0 z-[100]'>
-              <div className='icon relative z-[1000]'>
+            <div className='fixed flex items-center justify-between w-full px-8 h-fit left-0 logo top-0 z-[100]'>
+              <div className='icon relative z-[1000] mt-5'>
                 <IconSvg
                 fill={"#fff"}
                 height={"70"}
