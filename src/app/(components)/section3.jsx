@@ -33,19 +33,11 @@ const Section3 = () => {
         .from(leftImage, {
           opacity: 0,
           x: -200,
-          duration: 0.5,
+          duration: 1.0,
           delay: 0.16,
-          // ease : "power4.out",
+          ease : "power4.out",
           stagger: -0.15,
         })
-        // .from(redSection1, {
-        //   opacity: 0,
-        //   x: -200,
-        //   duration: 0.8,
-        //   delay: 0.16,
-        //   // ease : "power4.out",
-        //   // stagger: -0.15,
-        // });
 
       timeline1.current = gsap.timeline({
         scrollTrigger : {
@@ -57,7 +49,9 @@ const Section3 = () => {
       }).from(redSection, {
         opacity : 0,
         x : -200,
-        duration : .4,
+        // duration : .4,
+        duration: 1.0,
+        ease: "power4.out",
         delay: .15,
         stagger : .15
       })

@@ -30,16 +30,8 @@ const Section4 = () => {
             trigger : text,
             start: "top bottom",
             toggleActions: "play none none reset",
-            // markers : true,
           }
         });
-
-        // ScrollTrigger.create({
-        //   trigger : text,
-        //   start: "top bottom",
-        //   toggleActions: "play none none reset",
-        //   markers : true,
-        // })
       })
 
       
@@ -53,9 +45,10 @@ const Section4 = () => {
         })
         .from(gridItems, {
           opacity: 0,
-          xPercent: -17,
+          xPercent: -20,
           stagger: 0.15,
-          duration: 0.3,
+          duration: .7,
+          ease : "power4.out"
         });
 
       timeline.current = gsap.timeline({

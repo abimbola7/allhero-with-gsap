@@ -23,7 +23,8 @@ const Button = ({ children, className }) => {
     }).from(buttonRef.current, {
       opacity: 0,
       x: -200,
-      duration: 0.5,
+      // duration: 0.5,
+      duration: 1.0,
       delay: 0.16,
       ease: "power4.out",
       stagger: -0.15,
