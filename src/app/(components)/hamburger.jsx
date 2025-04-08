@@ -33,7 +33,7 @@ const Hamburger = () => {
     onMouseLeave={mouseLeave}
     className='relative h-5 mb-3 cursor-pointer w-7 z-[100]' 
     ref={hamburgerContainer}>
-      <div className='w-full h-[.2rem] bg-white absolute hamburger top-0 left-0'></div>
+      <div className='w-full h-[.25rem] bg-white absolute hamburger top-0 left-0'></div>
       <div className='w-[50%] h-[.2rem] bg-white absolute hamburger top-[45%] right-0'></div>
       <div className='w-[75%] h-[.2rem] bg-white absolute hamburger bottom-0 right-0'></div>
     </div>
