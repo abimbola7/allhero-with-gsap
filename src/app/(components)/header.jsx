@@ -8,6 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Hamburger from './hamburger';
 import IconSvg from '@/assets/svgs/iconsvg';
 import Link from 'next/link';
+import TransitionLink from './transitionLink';
 
 
 
@@ -96,21 +97,26 @@ const Header = () => {
         status && (
           <div className='relative'>
             <div className='fixed flex items-center justify-between w-full px-8 h-fit left-0 logo top-0 z-[100]'>
-              <div className='icon relative z-[1000] mt-4'>
+              <TransitionLink 
+              href={"/"}
+              key={2}
+              className='icon relative z-[1000] mt-4 cursor-pointer'>
                 <IconSvg
                 fill={"#fff"}
                 width={"70"}
                 height={"70"}
                 key={2}
                 />  
-              </div>
+              </TransitionLink>
 
               <Hamburger />
             </div>
             <header className='fixed w-full z-[100000] top-0 left-0' ref={headerRef}>
               <div className='max-w-[95%] mx-auto hidden tab:flex items-center justify-end space-x-12 font-bold uppercase text-white pb-4 pt-16 text-sm'>
                 <div className='header'>about</div>
-                <Link href="/services" className='header'>service</Link>
+                <TransitionLink key={1} href={"/services"} className='cursor-pointer header'>
+                  service
+                </TransitionLink>
                 <div className='header'>work</div>
                 <div className='header'>company</div>
                 <div className='header'>career</div>

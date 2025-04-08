@@ -19,6 +19,15 @@ square {
   border-top: 40px solid transparent;
 }
 
+html::-webkit-scrollbar {
+  display : none;
+} 
+
+html {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
 /* .umplex-cls-1 {
   fill: #fff;
   stroke-width: 0px;

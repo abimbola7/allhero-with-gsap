@@ -11,9 +11,12 @@ const uiSlice = createSlice({
   reducers : {
     showHeader : (state, action) => {
       state.show = true
+    },
+    hideHeader : (state, action) => {
+      state.show = false
     }
   }
 })
 
-export const { showHeader } = uiSlice.actions;
+export const { showHeader, hideHeader } = uiSlice.actions;
 export default uiSlice.reducer;
