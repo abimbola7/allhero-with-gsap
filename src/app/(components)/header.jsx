@@ -41,13 +41,15 @@ const Header = () => {
         end : "10% top",
         toggleActions : "play none reverse none",
         // scrub : 2,
-        // markers : true,
+        markers : true,
       }
     }).to(header, {
       x : 100,
       duration : .3,
       stagger : -.04,
       opacity : 0
+    }).to(".mainheader", {
+      display : "none"
     })
   }, {
     dependencies : [status]
@@ -96,7 +98,7 @@ const Header = () => {
       {
         status && (
           <div className='relative'>
-            <div className='fixed flex items-center justify-between w-full px-8 h-fit left-0 logo top-0 z-[100]'>
+            <div className='fixed flex items-center justify-between w-full px-8 h-fit left-0 logo top-0 z-[300]'>
               <TransitionLink 
               href={"/"}
               key={2}
@@ -111,8 +113,8 @@ const Header = () => {
 
               <Hamburger />
             </div>
-            <header className='fixed w-full z-[100000] top-0 left-0' ref={headerRef}>
-              <div className='max-w-[95%] mx-auto hidden tab:flex items-center justify-end space-x-12 font-bold uppercase text-white pb-4 pt-16 text-sm'>
+            <header className='fixed w-full z-[300] top-0 left-0 mainheader' ref={headerRef}>
+              <div className='max-w-[95%] mx-auto hidden tab:flex items-center justify-end space-x-12 font-bold uppercase text-white pb-4 pt-16 text-sm relative z-[200]'>
                 <div className='header'>about</div>
                 <TransitionLink key={1} href={"/services"} className='cursor-pointer header'>
                   service
