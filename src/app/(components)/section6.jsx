@@ -25,8 +25,9 @@ const Section6 = () => {
         }
       }).from(".careerSect", {
         opacity : 0,
+        ease : "power4.out",
         x : -300,
-        duration : .5,
+        duration : .7,
         stagger : -0.1
       })
     }
