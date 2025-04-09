@@ -1,17 +1,25 @@
+"use client"
+
 import Link from 'next/link';
 import React from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { useDispatch } from 'react-redux';
+import { animatePageOut } from '@/app/utils/animate';
+import { usePathname, useRouter } from 'next/navigation';
 
 gsap.registerPlugin(ScrollTrigger)
 
-const Button = ({ children, className }) => {
+const Button = ({ children, className, href }) => {
   const buttonRef = React.useRef(null);
   const slideButtonRef = React.useRef(null);
   const textRef = React.useRef(null);
   const timeline = React.useRef(null);
   const timeline1 = React.useRef(null);
+  const dispatch = useDispatch();
+  const pathname = usePathname();
+  const router = useRouter();
 
   const { contextSafe } = useGSAP(() => {
     timeline1.current = gsap.timeline({
@@ -66,13 +74,19 @@ const Button = ({ children, className }) => {
     timeline.current?.seek(0).pause();
   })
 
+  const handleClick = () => {
+    if (pathname !== href) {
+      animatePageOut(href, router, dispatch)
+    }
+  }
+
   return (
-    <Link 
+    <div 
       ref={buttonRef}
       onMouseEnter={mouseEnter}
       onMouseLeave={mouseLeave}
-      href="" 
-      className={`bg-white text-[#640000] w-48 h-16 text-sm !mt-10 font-semibold relative !p-0 !m-0 overflow-hidden ${className}`}
+      onClick={handleClick}
+      className={`bg-white text-[#640000] w-48 h-16 text-sm !mt-10 font-semibold relative !p-0 !m-0 overflow-hidden ${className} cursor-pointer`}
     >
       <div 
         ref={textRef}
@@ -84,7 +98,7 @@ const Button = ({ children, className }) => {
         ref={slideButtonRef}
         className="absolute top-0 left-0 z-0 flex items-center justify-center w-full h-full bg-[#b30606] !p-0 !m-0" 
       />
-    </Link>
+    </div>
   )
 }
 

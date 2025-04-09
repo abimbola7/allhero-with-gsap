@@ -88,7 +88,9 @@ const Section3 = () => {
               </p>
 
               
-              <Button>
+              <Button
+              href={"/about"}
+              >
                 Go to About
               </Button>
             </div>
