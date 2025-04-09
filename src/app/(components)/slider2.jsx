@@ -9,6 +9,7 @@ import { TfiAngleLeft } from "react-icons/tfi";
 import ScrollToPlugin from 'gsap/ScrollToPlugin'
 import Motto from '@/assets/svgs/motto'
 import IconSvg from '@/assets/svgs/iconsvg'
+import ScrollToView from './ui/scrollToView'
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -57,14 +58,6 @@ const Slider2 = () => {
     scope : container
   })
 
-  const scrollToView = contextSafe(() => {
-    gsap.to(window, {
-      ease : "none",
-      // duration : 1,
-      scrollTo : "#section2",
-      // scrollBehavior : "smooth"
-    })
-  })
 
   return (
     <div className='relative h-[80vh] overflow-x-hidden tab:h-full' ref={container}>
@@ -78,12 +71,9 @@ const Slider2 = () => {
           key={"1"}
           />
         </div>
-        <div className='absolute flex items-center space-x-3 tracking-wider text-white transition-transform -rotate-90 tab:space-x-8 -left-12 tab:-left-4 bottom-20 tab:bottom-40 '>
-          <div onClick={scrollToView} className='p-3 border rounded-full border-[hsla(0,0%,100%,.3)] cursor-pointer'>
-            <TfiAngleLeft className='w-2 h-2 tab:w-5 tab:h-5'/>
-          </div>
-          <p className='text-xs font-bold tracking-wider tab:text-sm'>Scroll to web site</p>
-        </div>
+        <ScrollToView
+        section={"#section2"}
+        />
         <div className='mt-20'>
           <Motto
           height={"auto"}
