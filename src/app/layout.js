@@ -1,4 +1,4 @@
-import { Inter, PT_Sans } from "next/font/google";
+import { Inter, Poppins, PT_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "./(components)/header";
 import ReduxProvider from "./(providers)/reduxprovider";

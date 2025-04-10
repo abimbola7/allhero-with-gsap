@@ -30,29 +30,6 @@ const Header = () => {
     dependencies : [status],
   })
 
-  // useGSAP(() => {
-    // const section2 = document.querySelector("#section2");
-    
-  //   const tl = gsap.timeline({
-  //     scrollTrigger : {
-  //       trigger : section2,
-  //       start : "top 20%",
-  //       end : "10% top",
-  //       toggleActions : "play none reverse none",
-  //       // scrub : 2,
-  //       // markers : true,
-  //     }
-  //   }).to(header, {
-  //     x : 100,
-  //     duration : .3,
-  //     stagger : -.04,
-  //     opacity : 0
-  //   }).to(".mainheader", {
-  //     display : "none"
-  //   })
-  // }, {
-  //   dependencies : [status]
-  // })
 
   useGSAP(()=>{
     const header = gsap.utils.toArray(".header");
