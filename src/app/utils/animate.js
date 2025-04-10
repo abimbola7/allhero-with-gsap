@@ -68,3 +68,25 @@ export const animatePageOut = (href, router, dispatch) => {
     scaleX : 0, transformOrigin : "left"
   }, 0.7)
 }
+
+
+export const mockAnimation = (section) => {
+  console.log(section)
+  const sectionSelect = document.querySelector(section)
+  const gridItems = gsap.utils.toArray(".grid-items"); 
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: sectionSelect,
+      start: "top bottom",
+      toggleActions: "play none none reset",
+      // markers: true,
+    },
+  })
+  .from(gridItems, {
+    opacity: 0,
+    xPercent: -20 ,
+    stagger: 0.2,
+    duration: 1,
+    ease : "power4.out"
+  });
+}
