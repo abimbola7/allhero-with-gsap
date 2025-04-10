@@ -18,7 +18,7 @@ const AboutHero = () => {
       />
       <div className='w-full mx-auto h-full absolute top-0 left-0 flex items-center'>
         <div className='max-w-4xl  w-full mx-auto flex flex-col text-white space-y-2 leading-none'>
-          <h1 className='text-[12rem] font-bold'>
+          <h1 className='text-[13vw] font-bold'>
             About
           </h1>
 

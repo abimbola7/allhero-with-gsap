@@ -8,7 +8,7 @@ const Red = () => {
     mockAnimation(".minisection2")
   })
   return (
-    <div className="w-full h-fit tab:h-screen bg-[#181818] red flex items-center py-10" id='section2'>
+    <div className="w-full h-fit tab:h-[50rem] bg-[#181818] red flex items-center py-10 " id='section2'>
       <div className='relative flex flex-col justify-start w-full max-w-3xl px-3 text-white tab:px-0 tab:max-w-5xl gap-y-5 tab:gap-y-16 mx-auto minisection2'>
         <div className='relative tab:absolute top-0 left-0 tab:-left-10 uppercase text-[#ffffff80] text-[.7rem] !rotate-0 tab:!-rotate-90 tab:translate-y-8 font-extrabold tracking-wider tab:-translate-x-7 minislogan w-fit h-fit !transform-none'>
           our slogan
