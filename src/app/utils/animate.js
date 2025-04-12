@@ -71,7 +71,6 @@ export const animatePageOut = (href, router, dispatch) => {
 
 
 export const mockAnimation = (section) => {
-  console.log(section)
   const sectionSelect = document.querySelector(section)
   const gridItems = gsap.utils.toArray(".grid-items"); 
   gsap.timeline({
@@ -89,4 +88,22 @@ export const mockAnimation = (section) => {
     duration: 1,
     ease : "power4.out"
   });
+}
+
+export const imagesAnimation = (sections) => {
+  const images = gsap.utils.toArray(sections);
+  images.forEach((image, i) => {
+    gsap.from(image, {
+      xPercent : -100,
+      ease : "power4.out",
+      duration: 1.5,
+      opacity : 0,
+      scrollTrigger : {
+        trigger : image,
+        start : `20% bottom`,
+        toggleActions : "play none none reset",
+        markers: true
+      }
+    })
+  })
 }

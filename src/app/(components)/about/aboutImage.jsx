@@ -1,12 +1,19 @@
+"use client"
+
 import Motto from '@/assets/svgs/motto'
 import Staylowkey from '@/assets/svgs/staylowkey'
 import React from 'react'
+import { useGSAP } from '@gsap/react'
+import { imagesAnimation } from '@/app/utils/animate'
 
 const AboutImage = () => {
+  useGSAP(() => {
+    imagesAnimation(".images")
+  })
   return (
-    <div className="bg-[#181818] relative flex w-full h-[95rem] py-20 tab:py-0 tab:h-[70rem] overflow-hidden" id="section4">
+    <div className="bg-[#181818] relative flex w-full min-h-[86rem] sm:h-[95rem] py-20 tab:py-0 tab:h-[70rem] overflow-hidden" id="section4">
       <div className='relative flex items-end w-full max-w-3xl text-white tab:px-0 tab:max-w-[1440px] gap-y-5 tab:gap-y-16 mx-auto minisection2'>
-        <div className='absolute bottom-0 -left-[13%] tab:top-0 tab:bottom-auto motto'>
+        <div className='absolute bottom-56 left-0 tab:-left-[13%] tab:top-0 tab:bottom-auto motto'>
           <Staylowkey
           className="w-[283x] h-[296px] tab:w-[900px] tab:h-[850px] z-[10]"
           width={"auto"}
@@ -20,33 +27,33 @@ const AboutImage = () => {
           <div className="relative w-full max-w-[1000px] aspect-[3/2] mx-auto">
             <img 
               src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/about/slogan02.jpg" 
-              className="absolute top-[0%] right-[0%] w-[60%] z-10"
+              className="absolute top-[0%] right-[0%] w-[60%] z-10 images"
               alt="img1"
             />
             <img 
               src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/about/slogan01.jpg" 
-              className="absolute top-[25%] left-[0%] w-[45%] z-[9]"
+              className="absolute top-[25%] left-[0%] w-[45%] z-[9] images"
               alt="img2"
             />
             <img 
               src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/about/slogan05.jpg" 
-              className="absolute top-[60%] left-[10%] w-[40%] z-[15]"
+              className="absolute top-[60%] left-[10%] w-[40%] z-[15] images"
               alt="img3"
             />
             <img 
               src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/about/slogan03.jpg" 
-              className="absolute top-[70%] right-0 w-[38%] z-[11]"
+              className="absolute top-[70%] right-0 w-[38%] z-[11] images"
               alt="img4"
             />
             <img 
               src="https://allhero.co.jp/wp-content/themes/allhero.co.jp/assets/images/about/slogan04.jpg" 
-              className="absolute top-[95%] left-[35%] w-[40%] z-[12]"
+              className="absolute top-[95%] left-[35%] w-[40%] z-[12] images"
               alt="img5"
             />
           </div>
         </div>
 
-        <div className='max-w-4xl w-full relative z-[11] mx-auto flex flex-col gap-20 pb-20'>
+        <div className='max-w-4xl w-full relative z-[11] mx-auto flex flex-col gap-20 pb-20 px-3 sm:px-6'>
           <Motto
           height={"auto"}
           width={"auto"}
