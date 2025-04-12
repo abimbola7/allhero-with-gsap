@@ -100,9 +100,46 @@ export const imagesAnimation = (sections) => {
       opacity : 0,
       scrollTrigger : {
         trigger : image,
-        start : `20% bottom`,
+        start : `21% bottom`,
         toggleActions : "play none none reset",
-        markers: true
+        // markers: true
+      }
+    })
+  })
+}
+
+export const StayLowKeyAnim = (section) => {
+  const motto = document.querySelector(".motto")
+  console.log(motto, section)
+  gsap.timeline({
+    scrollTrigger : {
+      trigger : section,
+      start : "top bottom",
+      toggleActions : "play none none reset",
+      markers : true
+    }
+  })
+  .from(motto, {
+    x: -250,
+    opacity : 0,
+    duration : 1.2,
+    ease : "power4.out",
+  },0)
+}
+
+export const idkWhatToNameThisAnim = (sections) => {
+  const sect = gsap.utils.toArray(sections);
+  sect.forEach((sec, i) => {
+    gsap.from(sec, {
+      xPercent : -10,
+      ease : "power4.out",
+      duration: 1.5,
+      opacity : 0,
+      scrollTrigger : {
+        trigger : sec,
+        start : `21% bottom`,
+        toggleActions : "play none none reset",
+        // markers: true
       }
     })
   })
