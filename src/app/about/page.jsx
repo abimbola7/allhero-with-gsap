@@ -2,6 +2,7 @@ import React from 'react'
 import AboutHero from '../(components)/about/hero'
 import Red from '../(components)/about/red'
 import AboutImage from '../(components)/about/aboutImage'
+import AnyoneHero from '../(components)/about/anyoneHero'
 
 const AboutPage = () => {
   return (
@@ -9,6 +10,7 @@ const AboutPage = () => {
       <AboutHero />
       <Red />
       <AboutImage />
+      <AnyoneHero />
     </div>
   )
 }

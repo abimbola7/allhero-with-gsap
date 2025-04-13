@@ -116,7 +116,7 @@ export const StayLowKeyAnim = (section) => {
       trigger : section,
       start : "top bottom",
       toggleActions : "play none none reset",
-      markers : true
+      // markers : true
     }
   })
   .from(motto, {
@@ -143,4 +143,22 @@ export const idkWhatToNameThisAnim = (sections) => {
       }
     })
   })
+}
+
+export const textAnimation = (sections) => {
+  const texts = gsap.utils.toArray(sections);
+  texts.forEach((text, i) => {
+    gsap.from(text, {
+      xPercent : -50,
+      ease : "circ.out",
+      // duration: .8,
+      opacity : 0,
+      scrollTrigger : {
+        trigger : text,
+        start : `21% bottom`,
+        toggleActions : "play none none reset",
+        // markers: true
+      }
+    })
+  }) 
 }
