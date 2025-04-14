@@ -7,6 +7,7 @@ import Values from '../(components)/about/values'
 import Allin from '../(components)/about/allin'
 import LogoSect from '../(components)/about/logosect'
 import Section9 from '../(components)/section9'
+import CeoMessage from '../(components)/about/ceomessage'
 
 const AboutPage = () => {
   return (
@@ -18,6 +19,7 @@ const AboutPage = () => {
       <Values />
       <Allin />
       <LogoSect />
+      <CeoMessage />
       <Section9 />
     </div>
   )
