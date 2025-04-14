@@ -10,8 +10,11 @@ const AnyoneHero = () => {
   return (
     <div className='w-full grid grid-cols-1 tab:grid-cols-2 justify-items-center bg-[#181818] '>
       <div className='py-60 bg-[#640000] w-full flex items-center text-white flex-col heroSect'>
-        <div className='flex flex-col w-full gap-10 max-w-[280px]'>
-          <div className='flex flex-col gap-4 mx-auto'>
+        <div className='flex flex-col w-full gap-10 px-6 tab:px-0 tab:max-w-[280px] relative'>
+          <div className='relative tab:absolute top-0 left-0 tab:-left-20 uppercase text-[#ffffff80] text-[.7rem] !rotate-0 tab:!-rotate-90 tab:translate-y-8 font-extrabold tracking-wider tab:-translate-x-7 minislogan w-fit h-fit !transform-none'>
+            VISION
+          </div>
+          <div className='flex flex-col gap-4 w-full max-w-[280px]'>
             <h1 className="text-[6rem] leading-none font-semibold heroSect">
               Anyone Can Be a HERO. 
             </h1>
@@ -32,8 +35,11 @@ const AnyoneHero = () => {
 
       </div>
       <div className='py-60 bg-[#ffffff] w-full flex items-center text-black flex-col heroSect'>
-        <div className='flex flex-col w-full gap-10 max-w-[280px]'>
-          <div className='flex flex-col gap-4 mx-auto'>
+        <div className='flex flex-col w-full gap-10 px-6 tab:px-0 tab:max-w-[280px] relative'>
+          <div className='relative tab:absolute top-0 left-0 tab:-left-20 uppercase text-[#000] text-[.7rem] !rotate-0 tab:!-rotate-90 tab:translate-y-8 font-extrabold tracking-wider tab:-translate-x-7 minislogan w-fit h-fit !transform-none'>
+            MISSION
+          </div>
+          <div className='flex flex-col gap-4 w-full max-w-[280px]'>
             <h1 className="text-[6rem] leading-none font-semibold heroSect">
               Be your own HERO. 
             </h1>

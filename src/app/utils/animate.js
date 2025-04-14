@@ -151,11 +151,11 @@ export const textAnimation = (sections) => {
     gsap.from(text, {
       xPercent : -50,
       ease : "circ.out",
-      // duration: .8,
+      duration: .6,
       opacity : 0,
       scrollTrigger : {
         trigger : text,
-        start : `21% bottom`,
+        start : `top bottom`,
         toggleActions : "play none none reset",
         // markers: true
       }

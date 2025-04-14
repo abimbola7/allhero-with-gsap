@@ -3,6 +3,7 @@ import AboutHero from '../(components)/about/hero'
 import Red from '../(components)/about/red'
 import AboutImage from '../(components)/about/aboutImage'
 import AnyoneHero from '../(components)/about/anyoneHero'
+import Values from '../(components)/about/values'
 
 const AboutPage = () => {
   return (
@@ -11,6 +12,7 @@ const AboutPage = () => {
       <Red />
       <AboutImage />
       <AnyoneHero />
+      <Values />
     </div>
   )
 }
