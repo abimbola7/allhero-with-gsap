@@ -4,6 +4,9 @@ import Red from '../(components)/about/red'
 import AboutImage from '../(components)/about/aboutImage'
 import AnyoneHero from '../(components)/about/anyoneHero'
 import Values from '../(components)/about/values'
+import Allin from '../(components)/about/allin'
+import LogoSect from '../(components)/about/logosect'
+import Section9 from '../(components)/section9'
 
 const AboutPage = () => {
   return (
@@ -13,6 +16,9 @@ const AboutPage = () => {
       <AboutImage />
       <AnyoneHero />
       <Values />
+      <Allin />
+      <LogoSect />
+      <Section9 />
     </div>
   )
 }

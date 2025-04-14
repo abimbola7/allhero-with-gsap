@@ -150,6 +150,7 @@ export const textAnimation = (sections) => {
   const texts = gsap.utils.toArray(sections);
   texts.forEach((text, i) => {
     gsap.from(text, {
+      delay: .2,
       xPercent : -50,
       ease : "circ.out",
       duration: .6,
