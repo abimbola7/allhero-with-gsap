@@ -146,6 +146,7 @@ export const idkWhatToNameThisAnim = (sections) => {
 }
 
 export const textAnimation = (sections) => {
+  console.log(sections)
   const texts = gsap.utils.toArray(sections);
   texts.forEach((text, i) => {
     gsap.from(text, {
