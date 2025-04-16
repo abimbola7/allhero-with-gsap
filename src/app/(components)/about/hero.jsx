@@ -14,9 +14,9 @@ const AboutHero = () => {
       src={'/abouthero.png'}
       alt='img'
       quality={100}
-      className='object-cover object-center w-full h-full'
+      className='object-cover object-center w-full h-full iloveyou'
       />
-      <div className='w-full mx-auto h-full absolute top-0 left-0 flex items-center'>
+      <div className='w-full mx-auto h-full absolute top-0 left-0 flex items-center px-4'>
         <div className='max-w-4xl  w-full mx-auto flex flex-col text-white space-y-2 leading-none'>
           <h1 className='text-[13vw] font-bold'>
             About
