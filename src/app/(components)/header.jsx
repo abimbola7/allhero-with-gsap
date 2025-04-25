@@ -4,20 +4,35 @@ import { useSelector, useDispatch } from 'react-redux'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 import Hamburger from './hamburger';
 import IconSvg from '@/assets/svgs/iconsvg';
-import Link from 'next/link';
 import TransitionLink from './transitionLink';
+import { usePathname, useRouter } from 'next/navigation';
+import { animatePageOut } from '../utils/animate';
 
 
 
 gsap.registerPlugin(ScrollTrigger)
 
 const Header = () => {
+  const dispatch = useDispatch()
+  const router = useRouter();
+  const pathname = usePathname();
   const status = useSelector(state=>state.ui.show);
   const headerRef = React.useRef();
+
+  const handleClick = (href) => {
+    if (pathname !== href) {
+      animatePageOut(href, router, dispatch)
+    }
+  }
+  
   useGSAP(()=>{
+    gsap.set(".animheader",
+      {
+        xPercent : -100
+      }
+    )
     if (headerRef.current) {
       gsap.from(headerRef?.current, {
         delay : 1.5,
@@ -77,6 +92,17 @@ const Header = () => {
     dependencies : [status]
   })
   
+  const headerHover = (className) => {
+    console.log("kjwhdbgiubwiugbijwebgibweiugg igbvu")
+    console.log(className);
+    gsap.to(`.${className}`, {
+      xPercent : 0,
+    })
+  }
+
+  const headerOut = () => {
+    
+  }
   
   return (
     <>
@@ -100,15 +126,29 @@ const Header = () => {
             </div>
             <header className='fixed w-full z-[300] top-0 left-0 mainheader' ref={headerRef}>
               <div className='max-w-[95%] mx-auto hidden tab:flex items-center justify-end space-x-12 font-bold uppercase text-white pb-4 pt-12 text-sm relative z-[200]'>
-                <div className='header'>about</div>
-                <TransitionLink key={1} href={"/services"} className='cursor-pointer header'>
-                  service
-                </TransitionLink>
-                <div className='header'>work</div>
-                <div className='header'>company</div>
-                <div className='header'>career</div>
-                <div className='header'>news</div>
-                <div className='header'>contact</div>
+                {
+                  [
+                    ["about", "/about"],
+                    ["service","/service"],
+                    ["work", "/work"],
+                    ["company", "/company"],
+                    ["career", "/career"],
+                    ["news", "/news"],
+                    ["contact", "/contact"],
+                  ].map(([item, href], index) => (
+                    <div
+                    key={href}
+                    className={"header cursor-pointer text-sm relative overflow-hidden"}
+                    onClick={() => handleClick(href)}
+                    onMouseEnter={() => headerHover(`${`animateheader${index+1}`}`)}
+                    href={href}
+                    >
+                      <div 
+                      className={`absolute animheader animateheader${index+1} bottom-0 w-full h-0.5 bg-white pointer-events-none`}></div>
+                      { item }
+                    </div>
+                  ))
+                }
               </div>
             </header> 
           </div>
