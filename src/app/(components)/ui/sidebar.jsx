@@ -2,20 +2,43 @@
 
 import { animatePageOut } from '@/app/utils/animate';
 import IconSvg from '@/assets/svgs/iconsvg';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import { usePathname, useRouter } from 'next/navigation';
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 
 const Sidebar = () => {
+  console.log("hgwvfuyvyvwqeuvfuvuyudsvuy")
   const showBar = useSelector(state=>state.ui.showBar)
   const dispatch = useDispatch()
   const router = useRouter();
   const pathname = usePathname();
+  const openingRef = React.useRef(null)
   const handleClick = (href) => {
     if (pathname !== href) {
       animatePageOut(href, router, dispatch)
     }
   }
+
+  const { contextSafe } = useGSAP(() => {
+    // const openingRef = document.querySelector(".open");
+    console.log(openingRef)
+    const tl = gsap.timeline({
+      defaults : {
+        // immediateRender : false,
+        duration : .4
+      }
+    }).from(openingRef.current, {
+        xPercent : -100, scaleX : 1
+      }, 0)
+      .to(openingRef.current, {
+        scaleX : 0, transformOrigin : "right"
+      }, 0.2)
+  }, {
+    scope : openingRef,
+    dependencies : [showBar]
+  })
   return (
     <>
       {
@@ -30,6 +53,11 @@ const Sidebar = () => {
             key={"1"}
             />
         </div> */}
+        <div
+        ref={openingRef} 
+        className='absolute top-0 left-0 w-full !p-0 !m-0 h-full bg-[#B30606] open'>
+
+        </div>
         <div className='flex flex-col w-full max-w-2xl'>
           {
             [

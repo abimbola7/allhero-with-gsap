@@ -31,7 +31,7 @@ const Header = () => {
   useGSAP(()=>{
     gsap.set(".animheader",
       {
-        xPercent : -100
+        xPercent : -110
       }
     )
     if (headerRef.current) {
@@ -102,7 +102,7 @@ const Header = () => {
 
   const headerOut = (className) => {
     gsap.to(`.${className}`, {
-      xPercent : -100,
+      xPercent : -110,
       duration: .4
     })
   }
