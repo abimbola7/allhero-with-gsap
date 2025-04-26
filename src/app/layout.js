@@ -2,6 +2,7 @@ import { Inter, Poppins, PT_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "./(components)/header";
 import ReduxProvider from "./(providers)/reduxprovider";
+import Sidebar from "./(components)/ui/sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${pt_sans.className} overflow-x-hidden`}>
         <ReduxProvider>
+          <Sidebar />
           <Header />
           {children}
         </ReduxProvider>

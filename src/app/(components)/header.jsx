@@ -18,6 +18,7 @@ const Header = () => {
   const dispatch = useDispatch()
   const router = useRouter();
   const pathname = usePathname();
+  console.log(pathname)
   const status = useSelector(state=>state.ui.show);
   const headerRef = React.useRef();
 
@@ -93,15 +94,17 @@ const Header = () => {
   })
   
   const headerHover = (className) => {
-    console.log("kjwhdbgiubwiugbijwebgibweiugg igbvu")
-    console.log(className);
     gsap.to(`.${className}`, {
       xPercent : 0,
+      duration: .4
     })
   }
 
-  const headerOut = () => {
-    
+  const headerOut = (className) => {
+    gsap.to(`.${className}`, {
+      xPercent : -100,
+      duration: .4
+    })
   }
   
   return (
@@ -138,9 +141,14 @@ const Header = () => {
                   ].map(([item, href], index) => (
                     <div
                     key={href}
-                    className={"header cursor-pointer text-sm relative overflow-hidden"}
+                    className={`header cursor-pointer text-xs relative overflow-hidden ${ pathname === href && "text-[#A42319]" }`}
                     onClick={() => handleClick(href)}
-                    onMouseEnter={() => headerHover(`${`animateheader${index+1}`}`)}
+                    onMouseEnter={() => {
+                      pathname !== href && headerHover(`${`animateheader${index+1}`}`)}
+                    }
+                    onMouseLeave={() => {
+                      pathname !== href && headerOut(`${`animateheader${index+1}`}`)}
+                    }
                     href={href}
                     >
                       <div 

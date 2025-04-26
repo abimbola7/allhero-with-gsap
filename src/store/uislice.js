@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const initialUiState = {
-  show : false
+  show : false,
+  showBar : false
 }
 
 const uiSlice = createSlice({
@@ -14,9 +15,12 @@ const uiSlice = createSlice({
     },
     hideHeader : (state, action) => {
       state.show = false
+    },
+    showSideBar : (state, action) => {
+      state.showBar = !state.showBar
     }
   }
 })
 
-export const { showHeader, hideHeader } = uiSlice.actions;
+export const { showHeader, hideHeader, showSideBar } = uiSlice.actions;
 export default uiSlice.reducer;
