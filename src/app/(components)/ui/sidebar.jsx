@@ -20,7 +20,7 @@ const Sidebar = () => {
     <>
       {
         showBar && (
-      <div className='w-full h-screen bg-black fixed z-[100] flex items-center justify-center'>
+      <div className='w-full h-screen bg-black fixed z-[100] flex items-center justify-center px-3'>
         {/* <div className='absolute top-0 left-0 p-4 tab:p-10'>
             <IconSvg
             fill={"#B30606"}
@@ -30,7 +30,7 @@ const Sidebar = () => {
             key={"1"}
             />
         </div> */}
-        <div className='flex flex-col w-full max-w-2xl border'>
+        <div className='flex flex-col w-full max-w-2xl'>
           {
             [
               ["about", "/about"],

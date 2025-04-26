@@ -37,7 +37,7 @@ const Hamburger = () => {
     }, 0)
     .to(xSymb, {
       x : -20
-    }, .3)
+    }, 0)
 
 
     // if (showBar) {
