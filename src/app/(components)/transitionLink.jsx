@@ -5,7 +5,7 @@ import { animatePageOut } from "../utils/animate";
 import { useDispatch } from "react-redux";
 
 const TransitionLink = ({ href, className, children }) => {
-  console.log(href)
+  // console.log(href)
   const dispatch = useDispatch()
   const router = useRouter();
   const pathname = usePathname();

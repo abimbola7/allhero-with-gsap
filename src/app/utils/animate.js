@@ -110,7 +110,7 @@ export const imagesAnimation = (sections) => {
 
 export const StayLowKeyAnim = (section) => {
   const motto = document.querySelector(".motto")
-  console.log(motto, section)
+  // console.log(motto, section)
   gsap.timeline({
     scrollTrigger : {
       trigger : section,
@@ -146,7 +146,7 @@ export const idkWhatToNameThisAnim = (sections) => {
 }
 
 export const textAnimation = (sections) => {
-  console.log(sections)
+  // console.log(sections)
   const texts = gsap.utils.toArray(sections);
   texts.forEach((text, i) => {
     gsap.from(text, {
@@ -163,4 +163,16 @@ export const textAnimation = (sections) => {
       }
     })
   }) 
+}
+
+
+export const fadeInText = (element) => {
+  console.log("is fadein working??")
+  const sect = document.querySelectorAll(element);
+  gsap.from(sect, {
+    delay : .4,
+    opacity: 0,
+    stagger : -.2,
+    y : -40
+  })
 }

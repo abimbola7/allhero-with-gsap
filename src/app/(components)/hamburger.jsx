@@ -8,12 +8,12 @@ import { showSideBar } from '@/store/uislice';
 const Hamburger = () => {
   const showBar = useSelector(state=>state.ui.showBar)
   const dispatch = useDispatch()
-  console.log(showBar)
+  // console.log(showBar)
   const hamburgerContainer = React.useRef(null);
   const timeline = React.useRef(null);
   const timeline1 = React.useRef(null);
   const { contextSafe } = useGSAP(() => {
-    console.log(document.querySelector(".xSymb"))
+    // console.log(document.querySelector(".xSymb"))
     const xSymb = document.querySelector(".xSymb")
     const hamb = document.querySelector(".hamb")
     const hamburger = gsap.utils.toArray(".hamburger")

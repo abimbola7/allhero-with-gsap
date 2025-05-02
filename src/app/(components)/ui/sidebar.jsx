@@ -5,11 +5,12 @@ import IconSvg from '@/assets/svgs/iconsvg';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { usePathname, useRouter } from 'next/navigation';
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
+import { showSideBar } from '@/store/uislice';
+import { fadeInText } from '@/app/utils/animate';
 
 const Sidebar = () => {
-  console.log("hgwvfuyvyvwqeuvfuvuyudsvuy")
   const showBar = useSelector(state=>state.ui.showBar)
   const dispatch = useDispatch()
   const router = useRouter();
@@ -22,8 +23,7 @@ const Sidebar = () => {
   }
 
   const { contextSafe } = useGSAP(() => {
-    // const openingRef = document.querySelector(".open");
-    console.log(openingRef)
+    fadeInText(".nav-link")
     const tl = gsap.timeline({
       defaults : {
         // immediateRender : false,
@@ -39,11 +39,19 @@ const Sidebar = () => {
     scope : openingRef,
     dependencies : [showBar]
   })
+
+  React.useEffect(() => {
+    if (showBar) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [showBar])
   return (
     <>
       {
         showBar && (
-      <div className='w-full h-screen bg-black fixed z-[100] flex items-center justify-center px-3'>
+      <div className='w-full h-screen bg-black fixed z-[100] flex items-center justify-center px-3 sidebar'>
         {/* <div className='absolute top-0 left-0 p-4 tab:p-10'>
             <IconSvg
             fill={"#B30606"}
@@ -70,9 +78,16 @@ const Sidebar = () => {
               ["contact", "/contact"],
             ].map(([item, href], index) => (
               <div
+              id="yee"
               key={index}
-              onClick={() => handleClick(href)}
-              className='text-6xl font-semibold text-white capitalize cursor-pointer hover:text-[#B30606] transition-colors duration-[900ms] w-fit'>
+              onClick={() => {
+                handleClick(href)
+                setTimeout(() => {
+                  pathname !== `/${document.getElementById("yee").innerHTML}` && dispatch(showSideBar())
+                  // console.log(document.getElementById("yee").innerHTML)
+                }, 1000)
+              }}
+              className='nav-link text-6xl font-semibold text-white capitalize cursor-pointer hover:text-[#B30606] transition-colors duration-[900ms] w-fit'>
                 {item}
               </div>
             ))  

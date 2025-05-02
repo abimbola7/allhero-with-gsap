@@ -18,7 +18,7 @@ const Header = () => {
   const dispatch = useDispatch()
   const router = useRouter();
   const pathname = usePathname();
-  console.log(pathname)
+  // console.log(pathname)
   const status = useSelector(state=>state.ui.show);
   const headerRef = React.useRef();
 
