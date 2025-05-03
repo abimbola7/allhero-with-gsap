@@ -4,6 +4,7 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import Image from 'next/image'
 import TextTransition, { presets } from 'react-text-transition'
+import Progress from './ui/progress'
 
 const texts = [ "sign", "job", "secret", "value"]
 
@@ -66,6 +67,10 @@ const Slider1 = () => {
 
   return (
     <div className='relative overflow-x-hidden' ref={container}>
+      {/* <Progress 
+      fade={fadeDuration}
+      stay={stayDuration}
+      /> */}
       <div className='w-full h-[80vh] relative overflow-x-hidden hidden tab:block'>
         <div className='overflow-hidden imgt img1 white'>
         <Image
