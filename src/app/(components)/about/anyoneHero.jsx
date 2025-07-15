@@ -4,6 +4,7 @@ import { useGSAP } from '@gsap/react'
 import React from 'react'
 
 const AnyoneHero = () => {
+  console.log("good evening")
   useGSAP(() => {
     textAnimation(".heroSect")
   })
